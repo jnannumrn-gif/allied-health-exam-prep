@@ -174,6 +174,7 @@ function userResponse(u) {
     name: u.name,
     language: u.language,
     exam_date: u.exam_date,
+    certification: u.certification || 'medical_assisting',
   };
 }
 
@@ -218,7 +219,7 @@ export default {
 
       if (path === "/api/auth/register" && method === "POST") {
         const body = await request.json();
-        const { email, password, name, language = "es", exam_date = null } = body;
+        const { email, password, name, language = "es", exam_date = null, certification = "medical_assisting" } = body;
         if (!email || !password || !name) return err("Missing fields");
         const existing = await db
           .prepare("SELECT id FROM users WHERE email = ?")
@@ -229,9 +230,9 @@ export default {
         const pwHash = await hashPassword(password);
         await db
           .prepare(
-            "INSERT INTO users (id, email, password_hash, name, language, exam_date) VALUES (?,?,?,?,?,?)"
+            "INSERT INTO users (id, email, password_hash, name, language, exam_date, certification) VALUES (?,?,?,?,?,?,?)"
           )
-          .bind(userId, email, pwHash, name, language, exam_date)
+          .bind(userId, email, pwHash, name, language, exam_date, certification)
           .run();
         const user = await db
           .prepare("SELECT * FROM users WHERE id = ?")
@@ -283,6 +284,10 @@ export default {
         if (body.exam_date !== undefined) {
           updates.push("exam_date = ?");
           params.push(body.exam_date);
+        }
+        if (body.certification) {
+          updates.push("certification = ?");
+          params.push(body.certification);
         }
         if (body.password && body.current_password) {
           const valid = await verifyPassword(

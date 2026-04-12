@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { useI18n } from "../i18n";
-import config from "../config";
+import { useAuth } from "../auth";
+import config, { certifications } from "../config";
 import api, { type Question, type AttemptResult } from "../api";
 import { CheckCircle, XCircle, ArrowLeft } from "lucide-react";
 
@@ -15,8 +16,11 @@ interface AnsweredQuestion {
 
 export default function Practice() {
   const { t, lang } = useI18n();
+  const { user } = useAuth();
   const [params] = useSearchParams();
-  const [domain, setDomain] = useState(params.get("domain") || "");
+  const userCert = user?.certification || "medical_assisting";
+  const cert = useMemo(() => certifications.find((c) => c.id === userCert) || certifications[0], [userCert]);
+  const [domain, setDomain] = useState(params.get("domain") || userCert);
   const [count, setCount] = useState(25);
   const [started, setStarted] = useState(false);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -111,6 +115,9 @@ export default function Practice() {
                   <option key={d} value={d}>{t(`domain.${d}`)}</option>
                 ))}
               </select>
+              <p className="text-xs mt-1 px-1" style={{ color: cert.color }}>
+                {cert.examCode} — {lang === "es" ? cert.nameEs : cert.name}
+              </p>
             </div>
 
             <div>

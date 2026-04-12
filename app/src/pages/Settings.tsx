@@ -1,21 +1,30 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useI18n } from "../i18n";
 import { useAuth } from "../auth";
-import config from "../config";
+import { certifications } from "../config";
 import api from "../api";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Stethoscope, Pill, Droplets, Lock } from "lucide-react";
+
+const certIcons: Record<string, typeof Stethoscope> = {
+  Stethoscope,
+  Pill,
+  Droplets,
+};
 
 export default function Settings() {
   const { t, lang, setLang } = useI18n();
   const { user, logout, updateUser } = useAuth();
   const [name, setName] = useState(user?.name || "");
   const [examDate, setExamDate] = useState(user?.exam_date || "");
+  const [certification, setCertification] = useState(user?.certification || "medical_assisting");
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState("");
+
+  const cert = useMemo(() => certifications.find((c) => c.id === certification) || certifications[0], [certification]);
 
   const handleSave = async () => {
     setSaving(true);
@@ -26,6 +35,7 @@ export default function Settings() {
       if (name !== user?.name) data.name = name;
       if (lang !== user?.language) data.language = lang;
       if (examDate !== (user?.exam_date || "")) data.exam_date = examDate || null;
+      if (certification !== (user?.certification || "")) data.certification = certification;
       if (currentPassword && newPassword) {
         data.current_password = currentPassword;
         data.password = newPassword;
@@ -62,6 +72,44 @@ export default function Settings() {
               {t("settings.saved")}
             </div>
           )}
+
+          {/* Certification Selection */}
+          <div>
+            <label className="block text-sm text-gray-400 mb-2">{t("dash.certification")}</label>
+            <div className="grid grid-cols-1 gap-2">
+              {certifications.map((c) => {
+                const Icon = certIcons[c.icon] || Stethoscope;
+                const isActive = c.status === "active";
+                const isSelected = certification === c.id;
+                return (
+                  <button
+                    key={c.id}
+                    onClick={() => isActive && setCertification(c.id)}
+                    disabled={!isActive}
+                    className={`flex items-center gap-3 p-3 rounded-xl border text-left transition-all ${
+                      isSelected
+                        ? "border-teal-500 bg-teal-500/10"
+                        : isActive
+                        ? "border-gray-700 hover:border-gray-600"
+                        : "border-gray-800 opacity-50 cursor-not-allowed"
+                    }`}
+                  >
+                    <Icon size={20} color={c.color} />
+                    <div className="flex-1">
+                      <p className="text-white text-sm font-medium">{lang === "es" ? c.nameEs : c.name}</p>
+                      <p className="text-gray-500 text-xs">{c.examCode}</p>
+                    </div>
+                    {!isActive && (
+                      <span className="flex items-center gap-1 text-gray-500 text-xs">
+                        <Lock size={10} />
+                        {t("landing.coming_soon")}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
 
           <div>
             <label className="block text-sm text-gray-400 mb-1">{t("settings.language")}</label>
@@ -131,7 +179,7 @@ export default function Settings() {
             onClick={handleSave}
             disabled={saving}
             className="w-full py-3 rounded-xl text-white font-semibold transition-opacity disabled:opacity-50"
-            style={{ backgroundColor: config.themeColor }}
+            style={{ backgroundColor: cert.color }}
           >
             {saving ? t("common.loading") : t("settings.save")}
           </button>

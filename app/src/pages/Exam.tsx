@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useI18n } from "../i18n";
-import config from "../config";
+import { useAuth } from "../auth";
+import config, { certifications } from "../config";
 import api, { type Question } from "../api";
 import { ArrowLeft, Flag, Clock } from "lucide-react";
 
@@ -15,6 +16,11 @@ interface ExamAnswer {
 
 export default function Exam() {
   const { t, lang } = useI18n();
+  const { user } = useAuth();
+  const cert = useMemo(() => {
+    const userCert = user?.certification || "medical_assisting";
+    return certifications.find((c) => c.id === userCert) || certifications[0];
+  }, [user?.certification]);
   const [started, setStarted] = useState(false);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [current, setCurrent] = useState(0);
@@ -27,8 +33,8 @@ export default function Exam() {
   const answersRef = useRef<ExamAnswer[]>([]);
   const sessionIdRef = useRef<string | null>(null);
 
-  const totalQuestions = config.examQuestions;
-  const examMinutes = 150;
+  const totalQuestions = Math.min(config.examQuestions, cert.examQuestions);
+  const examMinutes = cert.examMinutes;
 
   const submitExam = useCallback(async () => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -90,7 +96,7 @@ export default function Exam() {
   const startExam = async () => {
     setLoading(true);
     try {
-      const qs = await api.getRandomQuestions({ limit: totalQuestions });
+      const qs = await api.getRandomQuestions({ domain: cert.id, limit: totalQuestions });
       const session = await api.createSession({
         session_type: "exam",
         total_questions: qs.length,
@@ -148,7 +154,10 @@ export default function Exam() {
           <p className="text-gray-400 mb-8">{t("exam.description")}</p>
 
           <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 text-center">
-            <Clock size={48} className="mx-auto mb-4" style={{ color: config.themeColor }} />
+            <Clock size={48} className="mx-auto mb-4" style={{ color: cert.color }} />
+            <p className="text-xs font-mono mb-2 px-2 py-1 rounded-full inline-block" style={{ backgroundColor: `${cert.color}20`, color: cert.color }}>
+              {cert.examCode}
+            </p>
             <p className="text-gray-300 mb-6">
               {totalQuestions} {lang === "en" ? "questions" : "preguntas"} &bull; {examMinutes} min
             </p>
