@@ -51,6 +51,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "nav.login": "Sign In",
     "nav.register": "Sign Up",
     "nav.logout": "Logout",
+    "nav.tutor": "AI Tutor",
 
     // Dashboard
     "dash.readiness": "Exam Readiness",
@@ -139,6 +140,25 @@ const translations: Record<Lang, Record<string, string>> = {
     "domain.health_info_tech": "Health Information Technology",
     "domain.patient_care_safety": "Patient Care & Safety",
 
+    // AI Tutor
+    "tutor.title": "AI Tutor",
+    "tutor.select_division": "Select your division",
+    "tutor.select_prompt": "Choose a specialization to start chatting with your AI tutor.",
+    "tutor.online": "Online",
+    "tutor.placeholder": "Ask a question...",
+    "tutor.hint": "Allied Health Exam Prep \u00b7 Educational content \u2014 Does not replace clinical judgment",
+    "tutor.change": "Change Division",
+    "tutor.medical_assisting": "Medical Assisting",
+    "tutor.pharmacy_tech": "Pharmacy Technician",
+    "tutor.health_info_tech": "Health Information Technology",
+    "tutor.patient_care_safety": "Patient Care & Safety",
+    "tutor.ma_desc": "Clinical procedures, patient intake, vital signs, EKG, phlebotomy, and medical office administration.",
+    "tutor.pt_desc": "Pharmacology, drug classifications, compounding, dispensing, inventory, and pharmacy law.",
+    "tutor.hit_desc": "Health records, coding systems (ICD/CPT), HIPAA compliance, EHR management, and data analytics.",
+    "tutor.pcs_desc": "Patient safety protocols, infection control, emergency response, and quality assurance.",
+    "tutor.welcome_title": "Your Allied Health clinical tutor",
+    "tutor.welcome_sub": "Ask anything about your specialization. I'm here to help you truly understand \u2014 not just memorize.",
+
     // Common
     "common.loading": "Loading...",
     "common.back": "Back",
@@ -185,6 +205,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "nav.login": "Iniciar Sesion",
     "nav.register": "Registrarse",
     "nav.logout": "Cerrar Sesion",
+    "nav.tutor": "Tutor IA",
 
     // Dashboard
     "dash.readiness": "Preparacion para el Examen",
@@ -272,6 +293,25 @@ const translations: Record<Lang, Record<string, string>> = {
     "domain.pharmacy_tech": "Tecnico de Farmacia",
     "domain.health_info_tech": "Tecnologia de Informacion en Salud",
     "domain.patient_care_safety": "Cuidado del Paciente y Seguridad",
+
+    // AI Tutor
+    "tutor.title": "Tutor IA",
+    "tutor.select_division": "Elige tu division",
+    "tutor.select_prompt": "Selecciona una especializacion para comenzar a chatear con tu tutor IA.",
+    "tutor.online": "En linea",
+    "tutor.placeholder": "Haz una pregunta...",
+    "tutor.hint": "Allied Health Exam Prep \u00b7 Contenido educativo \u2014 No reemplaza criterio clinico",
+    "tutor.change": "Cambiar Division",
+    "tutor.medical_assisting": "Asistencia Medica",
+    "tutor.pharmacy_tech": "Tecnico de Farmacia",
+    "tutor.health_info_tech": "Tecnologia de Informacion en Salud",
+    "tutor.patient_care_safety": "Cuidado del Paciente y Seguridad",
+    "tutor.ma_desc": "Procedimientos clinicos, toma de signos vitales, EKG, flebotomia y administracion de oficina medica.",
+    "tutor.pt_desc": "Farmacologia, clasificaciones de medicamentos, preparacion, dispensacion, inventario y leyes de farmacia.",
+    "tutor.hit_desc": "Registros de salud, sistemas de codificacion (ICD/CPT), cumplimiento HIPAA, gestion de EHR y analitica de datos.",
+    "tutor.pcs_desc": "Protocolos de seguridad del paciente, control de infecciones, respuesta a emergencias y aseguramiento de calidad.",
+    "tutor.welcome_title": "Tu tutor clinico de Salud Aliada",
+    "tutor.welcome_sub": "Haz cualquier pregunta sobre tu especializacion. Estoy aqui para ayudarte a entender \u2014 no solo a memorizar.",
 
     // Common
     "common.loading": "Cargando...",
