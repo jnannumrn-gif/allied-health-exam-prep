@@ -5,7 +5,7 @@ const config = {
   examQuestions: 100,
   storagePrefix: "allied_health",
   apiUrl: import.meta.env.VITE_API_URL || "http://localhost:8787",
-  tutorProxyUrl: import.meta.env.VITE_TUTOR_PROXY_URL || "http://localhost:8788",
+  tutorProxyUrl: import.meta.env.VITE_TUTOR_PROXY_URL || "https://allied-health-tutor-proxy.jnannum-rn.workers.dev",
   domains: [
     "medical_assisting",
     "pharmacy_tech",
