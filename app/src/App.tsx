@@ -11,6 +11,7 @@ import Flashcards from "./pages/Flashcards";
 import Stats from "./pages/Stats";
 import Settings from "./pages/Settings";
 import Admin from "./pages/Admin";
+import Tutor from "./pages/Tutor";
 
 export default function App() {
   return (
@@ -43,6 +44,10 @@ export default function App() {
         <Route
           path="/settings"
           element={<ProtectedRoute><Settings /></ProtectedRoute>}
+        />
+        <Route
+          path="/tutor"
+          element={<ProtectedRoute><Tutor /></ProtectedRoute>}
         />
         <Route path="/admin" element={<Admin />} />
       </Routes>

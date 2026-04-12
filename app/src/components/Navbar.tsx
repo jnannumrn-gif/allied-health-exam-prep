@@ -17,6 +17,7 @@ import {
   UserPlus,
   LogOut,
   Globe,
+  Bot,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -34,6 +35,7 @@ export default function Navbar() {
         { to: "/exam", label: t("nav.exam"), icon: ClipboardList },
         { to: "/flashcards", label: t("nav.flashcards"), icon: Layers },
         { to: "/stats", label: t("nav.stats"), icon: BarChart3 },
+        { to: "/tutor", label: t("nav.tutor"), icon: Bot },
         { to: "/settings", label: t("nav.settings"), icon: Settings },
       ]
     : [
