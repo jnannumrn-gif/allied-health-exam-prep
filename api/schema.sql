@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS users (
   name TEXT NOT NULL,
   language TEXT DEFAULT 'es',
   exam_date TEXT,
+  certification TEXT DEFAULT 'medical_assisting',
   created_at TEXT DEFAULT (datetime('now')),
   disabled INTEGER DEFAULT 0
 );

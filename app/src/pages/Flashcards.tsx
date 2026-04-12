@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useI18n } from "../i18n";
-import config from "../config";
+import { useAuth } from "../auth";
+import config, { certifications } from "../config";
 import api, { type Flashcard } from "../api";
 import { ArrowLeft, RotateCcw } from "lucide-react";
 
 export default function Flashcards() {
   const { t, lang } = useI18n();
-  const [domain, setDomain] = useState("");
+  const { user } = useAuth();
+  const userCert = user?.certification || "medical_assisting";
+  const cert = useMemo(() => certifications.find((c) => c.id === userCert) || certifications[0], [userCert]);
+  const [domain, setDomain] = useState(userCert);
   const [cards, setCards] = useState<Flashcard[]>([]);
   const [current, setCurrent] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -61,6 +65,9 @@ export default function Flashcards() {
               <option key={d} value={d}>{t(`domain.${d}`)}</option>
             ))}
           </select>
+          <p className="text-xs mt-1 px-1" style={{ color: cert.color }}>
+            {cert.examCode} — {lang === "es" ? cert.nameEs : cert.name}
+          </p>
         </div>
 
         <div className="flex gap-3 mb-6">

@@ -5,10 +5,10 @@ import {
   Send,
   Stethoscope,
   Pill,
-  Database,
-  ShieldCheck,
+  Droplets,
   Bot,
   User,
+  Lock,
 } from "lucide-react";
 
 interface ChatMessage {
@@ -121,78 +121,33 @@ Manten un tono profesional, calido y pedagogico — como un colega con 30 anos d
     },
   },
   {
-    id: "health_info_tech",
-    nameKey: "tutor.health_info_tech",
-    descKey: "tutor.hit_desc",
-    icon: Database,
+    id: "phlebotomy_tech",
+    nameKey: "tutor.phlebotomy_tech",
+    descKey: "tutor.phleb_desc",
+    icon: Droplets,
     color: "text-violet-400",
     borderColor: "border-violet-500/30",
     bgColor: "bg-violet-500/10",
     topics: {
-      en: ["ICD Coding", "CPT Coding", "HIPAA", "EHR Systems", "Data Analytics", "Medical Records", "Exam Prep"],
-      es: ["Codificacion ICD", "Codificacion CPT", "HIPAA", "Sistemas EHR", "Analitica de Datos", "Registros Medicos", "Prep. de Examen"],
+      en: ["Venipuncture", "Order of Draw", "Specimen Collection", "Safety Protocols", "Anatomy", "Lab Procedures", "Exam Prep"],
+      es: ["Venopuncion", "Orden de Extraccion", "Recoleccion de Muestras", "Protocolos de Seguridad", "Anatomia", "Procedimientos de Lab", "Prep. de Examen"],
     },
     suggestions: {
       en: [
-        "What is the difference between ICD-10 and CPT codes?",
-        "Explain the key HIPAA privacy rules",
-        "How do EHR systems improve patient care?",
-        "What are the main components of a health record?",
+        "What is the correct order of draw for venipuncture?",
+        "Explain the proper venipuncture technique step by step",
+        "What are the most common complications in phlebotomy?",
+        "How do I handle a difficult vein or patient?",
       ],
       es: [
-        "Cual es la diferencia entre codigos ICD-10 y CPT?",
-        "Explicame las reglas clave de privacidad de HIPAA",
-        "Como los sistemas EHR mejoran el cuidado del paciente?",
-        "Cuales son los componentes principales de un registro de salud?",
+        "Cual es el orden correcto de extraccion en venopuncion?",
+        "Explicame la tecnica correcta de venopuncion paso a paso",
+        "Cuales son las complicaciones mas comunes en flebotomia?",
+        "Como manejo una vena dificil o un paciente complicado?",
       ],
     },
     systemPrompt: {
-      en: `You are a clinical tutor specialized in Health Information Technology for Allied Health Exam Prep. Your mission is to teach health records management, coding systems (ICD-10, CPT), HIPAA compliance, EHR systems, data analytics, medical terminology for coding, and exam preparation — clearly, deeply, and with practical reasoning.
-
-Respond in English by default. If the user writes in Spanish, respond in Spanish.
-Use accessible but technically precise language.
-When helpful, structure your response with key points or steps.
-At the end of longer responses, you may add a reflection question in exam style.
-Never fabricate regulatory or coding information. If something requires institutional validation, say so.
-Maintain a professional, warm, and pedagogical tone — like a colleague with 30 years of experience who genuinely wants the student to understand.`,
-      es: `Eres un tutor clinico especializado en Tecnologia de Informacion en Salud para Allied Health Exam Prep. Tu mision es ensenar gestion de registros de salud, sistemas de codificacion (ICD-10, CPT), cumplimiento de HIPAA, sistemas EHR, analitica de datos, terminologia medica para codificacion y preparacion para el examen — de manera clara, profunda y con razonamiento practico.
-
-Responde siempre en espanol a menos que el usuario escriba en ingles.
-Usa lenguaje accesible pero tecnicamente preciso.
-Cuando sea util, estructura tu respuesta con puntos clave o pasos.
-Al final de respuestas largas, puedes agregar una pregunta de reflexion tipo examen.
-Jamas inventes informacion regulatoria o de codificacion. Si algo requiere validacion institucional, dilo.
-Manten un tono profesional, calido y pedagogico — como un colega con 30 anos de experiencia que genuinamente quiere que el estudiante entienda.`,
-    },
-  },
-  {
-    id: "patient_care_safety",
-    nameKey: "tutor.patient_care_safety",
-    descKey: "tutor.pcs_desc",
-    icon: ShieldCheck,
-    color: "text-amber-400",
-    borderColor: "border-amber-500/30",
-    bgColor: "bg-amber-500/10",
-    topics: {
-      en: ["Infection Control", "Emergency Response", "Patient Rights", "Fall Prevention", "Quality Assurance", "Safety Protocols", "Exam Prep"],
-      es: ["Control de Infecciones", "Respuesta a Emergencias", "Derechos del Paciente", "Prevencion de Caidas", "Aseg. de Calidad", "Protocolos de Seguridad", "Prep. de Examen"],
-    },
-    suggestions: {
-      en: [
-        "What are the standard precautions for infection control?",
-        "Explain the chain of infection and how to break it",
-        "What are the key patient rights I need to know?",
-        "How should I respond to a patient fall?",
-      ],
-      es: [
-        "Cuales son las precauciones estandar para control de infecciones?",
-        "Explicame la cadena de infeccion y como romperla",
-        "Cuales son los derechos clave del paciente que debo conocer?",
-        "Como debo responder ante una caida del paciente?",
-      ],
-    },
-    systemPrompt: {
-      en: `You are a clinical tutor specialized in Patient Care & Safety for Allied Health Exam Prep. Your mission is to teach patient safety protocols, infection control, emergency response procedures, fall prevention, patient rights, quality assurance, and exam preparation — clearly, deeply, and with real clinical reasoning.
+      en: `You are a clinical tutor specialized in Phlebotomy Technology for Allied Health Exam Prep. Your mission is to teach venipuncture techniques, order of draw, specimen collection and handling, safety protocols, vascular anatomy, lab procedures, and exam preparation — clearly, deeply, and with real clinical reasoning.
 
 Respond in English by default. If the user writes in Spanish, respond in Spanish.
 Use accessible but technically precise language.
@@ -200,7 +155,7 @@ When helpful, structure your response with key points or steps.
 At the end of longer responses, you may add a reflection question in exam style.
 Never fabricate clinical information. If something requires institutional validation, say so.
 Maintain a professional, warm, and pedagogical tone — like a colleague with 30 years of experience who genuinely wants the student to understand.`,
-      es: `Eres un tutor clinico especializado en Cuidado del Paciente y Seguridad para Allied Health Exam Prep. Tu mision es ensenar protocolos de seguridad del paciente, control de infecciones, procedimientos de respuesta a emergencias, prevencion de caidas, derechos del paciente, aseguramiento de calidad y preparacion para el examen — de manera clara, profunda y con razonamiento clinico real.
+      es: `Eres un tutor clinico especializado en Tecnologia de Flebotomia para Allied Health Exam Prep. Tu mision es ensenar tecnicas de venopuncion, orden de extraccion, recoleccion y manejo de muestras, protocolos de seguridad, anatomia vascular, procedimientos de laboratorio y preparacion para el examen — de manera clara, profunda y con razonamiento clinico real.
 
 Responde siempre en espanol a menos que el usuario escriba en ingles.
 Usa lenguaje accesible pero tecnicamente preciso.
@@ -211,6 +166,8 @@ Manten un tono profesional, calido y pedagogico — como un colega con 30 anos d
     },
   },
 ];
+
+const ACTIVE_CERT_IDS = ["medical_assisting"];
 
 function formatResponse(text: string): string {
   let formatted = text;
@@ -347,22 +304,35 @@ export default function Tutor() {
             <p className="text-gray-400 text-lg">{t("tutor.select_prompt")}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {DIVISIONS.map((div) => (
-              <button
-                key={div.id}
-                onClick={() => selectDivision(div)}
-                className={`${div.bgColor} ${div.borderColor} border rounded-2xl p-6 text-left transition-all hover:-translate-y-1 hover:shadow-lg`}
-              >
-                <div className={`${div.bgColor} ${div.borderColor} border w-14 h-14 rounded-xl flex items-center justify-center mb-4`}>
-                  <div.icon size={28} className={div.color} />
-                </div>
-                <h3 className="text-lg font-bold mb-2">{t(div.nameKey)}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {t(div.descKey)}
-                </p>
-              </button>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {DIVISIONS.map((div) => {
+              const isActive = ACTIVE_CERT_IDS.includes(div.id);
+              return (
+                <button
+                  key={div.id}
+                  onClick={() => isActive && selectDivision(div)}
+                  disabled={!isActive}
+                  className={`${div.bgColor} ${div.borderColor} border rounded-2xl p-6 text-left transition-all relative ${isActive ? "hover:-translate-y-1 hover:shadow-lg" : "opacity-60 cursor-not-allowed"}`}
+                >
+                  {!isActive && (
+                    <div className="absolute top-3 right-3 flex items-center gap-1 bg-gray-800/80 text-gray-400 text-xs px-2 py-1 rounded-full">
+                      <Lock size={10} />
+                      {t("tutor.coming_soon")}
+                    </div>
+                  )}
+                  <div className={`${div.bgColor} ${div.borderColor} border w-14 h-14 rounded-xl flex items-center justify-center mb-4`}>
+                    <div.icon size={28} className={div.color} />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">{t(div.nameKey)}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {t(div.descKey)}
+                  </p>
+                  {!isActive && (
+                    <p className="text-gray-500 text-xs mt-2 italic">{t("tutor.coming_soon_desc")}</p>
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

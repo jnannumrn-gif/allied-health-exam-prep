@@ -1,10 +1,9 @@
 -- Allied Health Exam Prep Seed Data: Questions & Flashcards (Bilingual EN/ES)
--- 100 questions across 4 domains + 40 flashcards
+-- 75 questions across 3 certifications + 30 flashcards
 
--- DOMAIN: medical_assisting (Medical Assisting) - 25 questions
--- DOMAIN: pharmacy_tech (Pharmacy Technician) - 25 questions
--- DOMAIN: health_info_tech (Health Information Technology) - 25 questions
--- DOMAIN: patient_care_safety (Patient Care & Safety) - 25 questions
+-- CERTIFICATION: medical_assisting (Medical Assistant - CMA/RMA) - 25 questions
+-- CERTIFICATION: pharmacy_tech (Pharmacy Technician - PTCB/ExCPT) - 25 questions
+-- CERTIFICATION: phlebotomy_tech (Phlebotomy Technician - CPT/PBT) - 25 questions
 
 -- ═══════════════════════════════════════════════════════════════════
 -- DOMAIN: medical_assisting — 25 questions
@@ -514,516 +513,263 @@ INSERT INTO questions VALUES ('q050','pharmacy_tech','medium',
 'Vitamin C (ascorbic acid) is a water-soluble vitamin important for immune function and collagen synthesis.',
 'La vitamina C (acido ascorbico) es una vitamina hidrosoluble importante para la funcion inmune y la sintesis de colageno.');
 
--- ═══════════════════════════════════════════════════════════════════
--- DOMAIN: health_info_tech — 25 questions
--- ═══════════════════════════════════════════════════════════════════
-
-INSERT INTO questions VALUES ('q051','health_info_tech','easy',
-'HIPAA stands for:',
-'HIPAA significa:',
-'Health Insurance Portability and Accountability Act','Ley de Portabilidad y Responsabilidad del Seguro Medico',
-'Health Information Privacy and Access Act','Ley de Privacidad y Acceso a Informacion de Salud',
-'Hospital Insurance Protection and Accountability Act','Ley de Proteccion y Responsabilidad del Seguro Hospitalario',
-'Health Integrity and Patient Advocacy Act','Ley de Integridad de Salud y Defensa del Paciente','A',
-'HIPAA (Health Insurance Portability and Accountability Act) of 1996 protects patient health information privacy.',
-'HIPAA (Ley de Portabilidad y Responsabilidad del Seguro Medico) de 1996 protege la privacidad de la informacion de salud del paciente.');
-
-INSERT INTO questions VALUES ('q052','health_info_tech','easy',
-'PHI stands for:',
-'PHI significa:',
-'Protected Health Information','Informacion de Salud Protegida',
-'Patient Health Insurance','Seguro de Salud del Paciente',
-'Public Health Initiative','Iniciativa de Salud Publica',
-'Personal Health Index','Indice de Salud Personal','A',
-'PHI (Protected Health Information) is any individually identifiable health information that is protected under HIPAA.',
-'PHI (Informacion de Salud Protegida) es cualquier informacion de salud individualmente identificable que esta protegida bajo HIPAA.');
-
-INSERT INTO questions VALUES ('q053','health_info_tech','medium',
-'ICD-10-CM codes are used for:',
-'Los codigos ICD-10-CM se usan para:',
-'Diagnosis coding','Codificacion de diagnosticos',
-'Procedure coding in hospitals','Codificacion de procedimientos en hospitales',
-'Billing for physician services only','Facturacion solo de servicios medicos',
-'Drug identification','Identificacion de medicamentos','A',
-'ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification) is used for diagnosis coding in all healthcare settings.',
-'ICD-10-CM (Clasificacion Internacional de Enfermedades, 10a Revision, Modificacion Clinica) se usa para codificacion de diagnosticos en todos los entornos de salud.');
-
-INSERT INTO questions VALUES ('q054','health_info_tech','medium',
-'CPT codes are used for:',
-'Los codigos CPT se usan para:',
-'Reporting medical procedures and services','Reportar procedimientos y servicios medicos',
-'Diagnosis coding','Codificacion de diagnosticos',
-'Identifying medications','Identificar medicamentos',
-'Patient registration','Registro de pacientes','A',
-'CPT (Current Procedural Terminology) codes are used to report medical, surgical, and diagnostic procedures and services.',
-'Los codigos CPT (Terminologia de Procedimientos Actuales) se usan para reportar procedimientos y servicios medicos, quirurgicos y diagnosticos.');
-
-INSERT INTO questions VALUES ('q055','health_info_tech','easy',
-'An EHR is:',
-'Un EHR es:',
-'Electronic Health Record','Expediente Electronico de Salud',
-'Emergency Health Response','Respuesta de Emergencia de Salud',
-'Essential Health Requirement','Requisito Esencial de Salud',
-'Enrolled Health Registry','Registro de Salud Inscrito','A',
-'An EHR (Electronic Health Record) is a digital version of a patient''s chart that can be shared across healthcare organizations.',
-'Un EHR (Expediente Electronico de Salud) es una version digital del expediente del paciente que puede compartirse entre organizaciones de salud.');
-
-INSERT INTO questions VALUES ('q056','health_info_tech','medium',
-'The minimum necessary standard under HIPAA requires:',
-'El estandar de minimo necesario bajo HIPAA requiere:',
-'Accessing only the minimum PHI needed to perform job duties','Acceder solo al minimo de PHI necesario para realizar funciones laborales',
-'Sharing all patient information with other providers','Compartir toda la informacion del paciente con otros proveedores',
-'Allowing patients full access to other patients records','Permitir a pacientes acceso total a expedientes de otros pacientes',
-'Publishing health records online','Publicar expedientes medicos en linea','A',
-'The minimum necessary standard requires that PHI access, use, and disclosure be limited to the minimum amount needed for the intended purpose.',
-'El estandar de minimo necesario requiere que el acceso, uso y divulgacion de PHI se limite a la cantidad minima necesaria para el proposito previsto.');
-
-INSERT INTO questions VALUES ('q057','health_info_tech','hard',
-'HCPCS Level II codes are used primarily for:',
-'Los codigos HCPCS Nivel II se usan principalmente para:',
-'Durable medical equipment, supplies, and non-physician services','Equipo medico duradero, suministros y servicios no medicos',
-'Inpatient hospital procedures','Procedimientos hospitalarios de internacion',
-'Laboratory tests only','Solo pruebas de laboratorio',
-'Physician office visits','Visitas medicas de consultorio','A',
-'HCPCS Level II codes cover items and services not included in CPT, such as DME, ambulance services, and prosthetics.',
-'Los codigos HCPCS Nivel II cubren articulos y servicios no incluidos en CPT, como equipo medico duradero, servicios de ambulancia y protesis.');
-
-INSERT INTO questions VALUES ('q058','health_info_tech','easy',
-'The SOAP note format stands for:',
-'El formato de nota SOAP significa:',
-'Subjective, Objective, Assessment, Plan','Subjetivo, Objetivo, Evaluacion, Plan',
-'Signs, Observations, Actions, Prognosis','Signos, Observaciones, Acciones, Pronostico',
-'Summary, Overview, Analysis, Procedure','Resumen, Panorama, Analisis, Procedimiento',
-'Status, Outcome, Activity, Progress','Estado, Resultado, Actividad, Progreso','A',
-'SOAP notes organize clinical documentation: Subjective (patient complaints), Objective (measurable findings), Assessment (diagnosis), Plan (treatment).',
-'Las notas SOAP organizan la documentacion clinica: Subjetivo (quejas del paciente), Objetivo (hallazgos medibles), Evaluacion (diagnostico), Plan (tratamiento).');
-
-INSERT INTO questions VALUES ('q059','health_info_tech','medium',
-'Under HIPAA, a covered entity includes:',
-'Bajo HIPAA, una entidad cubierta incluye:',
-'Health plans, healthcare providers, and healthcare clearinghouses','Planes de salud, proveedores de salud y camaras de compensacion de salud',
-'Only hospitals','Solo hospitales',
-'Only insurance companies','Solo companias de seguros',
-'Only government agencies','Solo agencias gubernamentales','A',
-'HIPAA covered entities are: health plans, healthcare providers who transmit health information electronically, and healthcare clearinghouses.',
-'Las entidades cubiertas por HIPAA son: planes de salud, proveedores de salud que transmiten informacion de salud electronicamente y camaras de compensacion de salud.');
-
-INSERT INTO questions VALUES ('q060','health_info_tech','medium',
-'The release of patient information requires:',
-'La divulgacion de informacion del paciente requiere:',
-'Written authorization from the patient or legal representative','Autorizacion escrita del paciente o representante legal',
-'Verbal permission only','Solo permiso verbal',
-'No authorization for any healthcare provider','Ninguna autorizacion para cualquier proveedor de salud',
-'Approval from insurance company only','Solo aprobacion de la compania de seguros','A',
-'Patient authorization for release of PHI must be in writing and include specific elements as defined by HIPAA.',
-'La autorizacion del paciente para divulgacion de PHI debe ser por escrito e incluir elementos especificos definidos por HIPAA.');
-
-INSERT INTO questions VALUES ('q061','health_info_tech','hard',
-'DRG (Diagnosis Related Group) is used for:',
-'DRG (Grupo Relacionado con el Diagnostico) se usa para:',
-'Medicare inpatient hospital reimbursement','Reembolso hospitalario de internacion de Medicare',
-'Outpatient billing only','Solo facturacion ambulatoria',
-'Pharmacy claims','Reclamos de farmacia',
-'Physician office visits','Visitas medicas de consultorio','A',
-'DRGs are used to classify hospital inpatient cases into groups for Medicare reimbursement purposes.',
-'Los DRG se usan para clasificar casos hospitalarios de internacion en grupos para propositos de reembolso de Medicare.');
-
-INSERT INTO questions VALUES ('q062','health_info_tech','easy',
-'Medical records must be maintained for a minimum of:',
-'Los expedientes medicos deben mantenerse por un minimo de:',
-'The period required by state and federal law (typically 6-10 years for adults)','El periodo requerido por la ley estatal y federal (tipicamente 6-10 anos para adultos)',
-'1 year','1 ano',
-'30 days','30 dias',
-'Indefinitely with no exceptions','Indefinidamente sin excepciones','A',
-'Record retention requirements vary by state but typically range from 6-10 years for adults. Minors records are kept longer.',
-'Los requisitos de retencion de expedientes varian por estado pero tipicamente van de 6-10 anos para adultos. Los expedientes de menores se conservan mas tiempo.');
-
-INSERT INTO questions VALUES ('q063','health_info_tech','medium',
-'E/M codes (Evaluation and Management) are used to report:',
-'Los codigos E/M (Evaluacion y Manejo) se usan para reportar:',
-'Office visits, hospital visits, and consultations','Visitas de consultorio, visitas hospitalarias y consultas',
-'Surgical procedures only','Solo procedimientos quirurgicos',
-'Laboratory tests','Pruebas de laboratorio',
-'Medication dispensing','Dispensacion de medicamentos','A',
-'E/M codes (99201-99499) report the level of service provided during patient encounters like office visits and hospital care.',
-'Los codigos E/M (99201-99499) reportan el nivel de servicio proporcionado durante encuentros con pacientes como visitas de consultorio y atencion hospitalaria.');
-
-INSERT INTO questions VALUES ('q064','health_info_tech','hard',
-'The Meaningful Use program (now Promoting Interoperability) requires:',
-'El programa de Uso Significativo (ahora Promoviendo la Interoperabilidad) requiere:',
-'Demonstrating effective use of certified EHR technology','Demostrar uso efectivo de tecnologia EHR certificada',
-'Using paper records exclusively','Usar expedientes de papel exclusivamente',
-'Eliminating all patient communications','Eliminar todas las comunicaciones con pacientes',
-'Using only proprietary software systems','Usar solo sistemas de software propietario','A',
-'The Promoting Interoperability program incentivizes meaningful use of certified EHR technology to improve quality, safety, and efficiency.',
-'El programa de Promoviendo la Interoperabilidad incentiva el uso significativo de tecnologia EHR certificada para mejorar calidad, seguridad y eficiencia.');
-
-INSERT INTO questions VALUES ('q065','health_info_tech','easy',
-'A patient''s date of birth, Social Security number, and medical record number are examples of:',
-'La fecha de nacimiento, numero de Seguro Social y numero de expediente medico de un paciente son ejemplos de:',
-'Patient identifiers (PHI)','Identificadores del paciente (PHI)',
-'Diagnosis codes','Codigos de diagnostico',
-'Procedure codes','Codigos de procedimiento',
-'Insurance plan numbers','Numeros de plan de seguro','A',
-'These are examples of PHI identifiers that are protected under HIPAA. There are 18 recognized identifiers total.',
-'Estos son ejemplos de identificadores PHI protegidos bajo HIPAA. Hay 18 identificadores reconocidos en total.');
-
-INSERT INTO questions VALUES ('q066','health_info_tech','medium',
-'A breach notification under HIPAA must be provided to affected individuals within:',
-'Una notificacion de violacion bajo HIPAA debe proporcionarse a las personas afectadas dentro de:',
-'60 days of discovery','60 dias del descubrimiento',
-'24 hours','24 horas',
-'1 year','1 ano',
-'30 days','30 dias','A',
-'HIPAA requires notification to affected individuals without unreasonable delay and no later than 60 days after discovery of a breach.',
-'HIPAA requiere notificacion a las personas afectadas sin demora irrazonable y no mas de 60 dias despues del descubrimiento de una violacion.');
-
-INSERT INTO questions VALUES ('q067','health_info_tech','medium',
-'The primary purpose of health information exchange (HIE) is to:',
-'El proposito principal del intercambio de informacion de salud (HIE) es:',
-'Allow secure sharing of patient data between different healthcare organizations','Permitir el intercambio seguro de datos de pacientes entre diferentes organizaciones de salud',
-'Replace all paper records','Reemplazar todos los expedientes de papel',
-'Eliminate the need for patient consent','Eliminar la necesidad de consentimiento del paciente',
-'Reduce the number of healthcare providers','Reducir el numero de proveedores de salud','A',
-'HIE enables the electronic sharing of health information among different healthcare organizations to improve care coordination.',
-'HIE permite el intercambio electronico de informacion de salud entre diferentes organizaciones de salud para mejorar la coordinacion de atencion.');
-
-INSERT INTO questions VALUES ('q068','health_info_tech','easy',
-'A modifier in CPT coding is used to:',
-'Un modificador en la codificacion CPT se usa para:',
-'Provide additional information about a procedure or service','Proporcionar informacion adicional sobre un procedimiento o servicio',
-'Replace the CPT code entirely','Reemplazar completamente el codigo CPT',
-'Identify the patient','Identificar al paciente',
-'Indicate the diagnosis','Indicar el diagnostico','A',
-'CPT modifiers (two-digit codes) provide additional information to describe circumstances that modify a service or procedure.',
-'Los modificadores CPT (codigos de dos digitos) proporcionan informacion adicional para describir circunstancias que modifican un servicio o procedimiento.');
-
-INSERT INTO questions VALUES ('q069','health_info_tech','hard',
-'Under HIPAA, the penalty for knowingly obtaining PHI under false pretenses is:',
-'Bajo HIPAA, la penalidad por obtener PHI a sabiendas bajo pretextos falsos es:',
-'Up to $100,000 fine and up to 5 years imprisonment','Hasta $100,000 de multa y hasta 5 anos de prision',
-'A warning letter only','Solo una carta de advertencia',
-'Up to $1,000 fine','Hasta $1,000 de multa',
-'No penalty if no harm occurred','Ninguna penalidad si no hubo dano','A',
-'HIPAA criminal penalties: up to $50,000/1 year for knowing violations, up to $100,000/5 years for false pretenses, up to $250,000/10 years for personal gain.',
-'Penalidades criminales de HIPAA: hasta $50,000/1 ano por violaciones a sabiendas, hasta $100,000/5 anos por pretextos falsos, hasta $250,000/10 anos por beneficio personal.');
-
-INSERT INTO questions VALUES ('q070','health_info_tech','medium',
-'ICD-10-PCS codes are used for:',
-'Los codigos ICD-10-PCS se usan para:',
-'Inpatient hospital procedure coding','Codificacion de procedimientos hospitalarios de internacion',
-'Outpatient diagnosis coding','Codificacion de diagnosticos ambulatorios',
-'Pharmacy billing','Facturacion de farmacia',
-'Dental procedure coding','Codificacion de procedimientos dentales','A',
-'ICD-10-PCS (Procedure Coding System) is used exclusively for coding inpatient hospital procedures in the United States.',
-'ICD-10-PCS (Sistema de Codificacion de Procedimientos) se usa exclusivamente para codificar procedimientos hospitalarios de internacion en Estados Unidos.');
-
-INSERT INTO questions VALUES ('q071','health_info_tech','easy',
-'Which organization maintains the CPT code set?',
-'Que organizacion mantiene el conjunto de codigos CPT?',
-'American Medical Association (AMA)','Asociacion Medica Americana (AMA)',
-'World Health Organization (WHO)','Organizacion Mundial de la Salud (OMS)',
-'Centers for Medicare and Medicaid Services (CMS)','Centros de Servicios de Medicare y Medicaid (CMS)',
-'American Hospital Association (AHA)','Asociacion Americana de Hospitales (AHA)','A',
-'The AMA develops and maintains the CPT code set, which is updated annually.',
-'La AMA desarrolla y mantiene el conjunto de codigos CPT, que se actualiza anualmente.');
-
-INSERT INTO questions VALUES ('q072','health_info_tech','medium',
-'Revenue cycle management in healthcare begins with:',
-'La gestion del ciclo de ingresos en salud comienza con:',
-'Patient scheduling and registration','Programacion y registro del paciente',
-'Claim submission','Envio de reclamos',
-'Payment posting','Registro de pagos',
-'Denial management','Gestion de denegaciones','A',
-'Revenue cycle management starts with patient scheduling/registration and ends with payment collection and account resolution.',
-'La gestion del ciclo de ingresos comienza con la programacion/registro del paciente y termina con la recoleccion de pagos y resolucion de cuentas.');
-
-INSERT INTO questions VALUES ('q073','health_info_tech','hard',
-'The HITECH Act of 2009:',
-'La Ley HITECH de 2009:',
-'Strengthened HIPAA enforcement and promoted EHR adoption','Fortalecio la aplicacion de HIPAA y promovio la adopcion de EHR',
-'Replaced HIPAA entirely','Reemplazo HIPAA por completo',
-'Only applied to government hospitals','Solo aplico a hospitales gubernamentales',
-'Eliminated electronic health records','Elimino los expedientes electronicos de salud','A',
-'HITECH (Health Information Technology for Economic and Clinical Health Act) strengthened HIPAA, expanded breach notification, and incentivized EHR adoption.',
-'HITECH (Ley de Tecnologia de Informacion de Salud para la Salud Economica y Clinica) fortalecio HIPAA, expandio la notificacion de violaciones e incentivo la adopcion de EHR.');
-
-INSERT INTO questions VALUES ('q074','health_info_tech','easy',
-'An advance directive is a legal document that:',
-'Una directiva anticipada es un documento legal que:',
-'States a patient''s healthcare wishes in case they cannot communicate','Expresa los deseos de atencion medica del paciente en caso de que no pueda comunicarse',
-'Assigns a new doctor to the patient','Asigna un nuevo medico al paciente',
-'Authorizes insurance payments','Autoriza pagos de seguros',
-'Transfers medical records','Transfiere expedientes medicos','A',
-'An advance directive documents a patient''s preferences for medical treatment if they become unable to make decisions for themselves.',
-'Una directiva anticipada documenta las preferencias del paciente para tratamiento medico si no puede tomar decisiones por si mismo.');
-
-INSERT INTO questions VALUES ('q075','health_info_tech','medium',
-'The main purpose of clinical documentation improvement (CDI) is to:',
-'El proposito principal de la mejora de documentacion clinica (CDI) es:',
-'Ensure accurate and complete clinical documentation for proper coding and reimbursement','Asegurar documentacion clinica precisa y completa para codificacion y reembolso adecuados',
-'Reduce the number of patient visits','Reducir el numero de visitas de pacientes',
-'Eliminate the need for physicians','Eliminar la necesidad de medicos',
-'Speed up discharge processes only','Solo acelerar procesos de alta','A',
-'CDI programs ensure clinical documentation accurately reflects patient acuity, supporting accurate coding, quality metrics, and appropriate reimbursement.',
-'Los programas CDI aseguran que la documentacion clinica refleje con precision la agudeza del paciente, apoyando codificacion precisa, metricas de calidad y reembolso apropiado.');
 
 -- ═══════════════════════════════════════════════════════════════════
--- DOMAIN: patient_care_safety — 25 questions
+-- CERTIFICATION: phlebotomy_tech — 25 questions
 -- ═══════════════════════════════════════════════════════════════════
 
-INSERT INTO questions VALUES ('q076','patient_care_safety','easy',
-'Standard precautions should be used:',
-'Las precauciones estandar deben usarse:',
-'With all patients regardless of diagnosis','Con todos los pacientes sin importar el diagnostico',
-'Only with patients who have known infections','Solo con pacientes que tienen infecciones conocidas',
-'Only in surgical settings','Solo en entornos quirurgicos',
-'Only with elderly patients','Solo con pacientes ancianos','A',
-'Standard precautions apply to all patients in all healthcare settings, regardless of suspected or confirmed infection status.',
-'Las precauciones estandar aplican a todos los pacientes en todos los entornos de salud, sin importar el estado de infeccion sospechado o confirmado.');
+INSERT INTO questions VALUES ('q051','phlebotomy_tech','easy',
+'The most commonly used vein for venipuncture is the:',
+'La vena mas comunmente usada para venopuncion es la:',
+'Median cubital vein','Vena cubital mediana',
+'Basilic vein','Vena basilica',
+'Cephalic vein','Vena cefalica',
+'Radial vein','Vena radial','A',
+'The median cubital vein in the antecubital fossa is the preferred site for venipuncture because it is large, well-anchored, and less painful.',
+'La vena cubital mediana en la fosa antecubital es el sitio preferido para venopuncion porque es grande, esta bien anclada y es menos dolorosa.');
 
-INSERT INTO questions VALUES ('q077','patient_care_safety','easy',
-'The single most effective way to prevent the spread of infection is:',
-'La forma mas efectiva de prevenir la propagacion de infecciones es:',
-'Hand hygiene','Higiene de manos',
-'Wearing gloves','Usar guantes',
-'Using antibiotics','Usar antibioticos',
-'Wearing a mask','Usar mascarilla','A',
-'Proper hand hygiene is the single most important measure to prevent healthcare-associated infections.',
-'La higiene de manos adecuada es la medida mas importante para prevenir infecciones asociadas a la atencion de salud.');
+INSERT INTO questions VALUES ('q052','phlebotomy_tech','easy',
+'The correct order of draw for evacuated tubes begins with:',
+'El orden correcto de extraccion para tubos al vacio comienza con:',
+'Blood cultures (yellow/black)','Hemocultivos (amarillo/negro)',
+'Lavender top (EDTA)','Tapa lavanda (EDTA)',
+'Red top (no additive)','Tapa roja (sin aditivo)',
+'Green top (heparin)','Tapa verde (heparina)','A',
+'The order of draw is: blood cultures, light blue (citrate), red/gold (SST), green (heparin), lavender (EDTA), gray (oxalate/fluoride).',
+'El orden de extraccion es: hemocultivos, azul claro (citrato), rojo/dorado (SST), verde (heparina), lavanda (EDTA), gris (oxalato/fluoruro).');
 
-INSERT INTO questions VALUES ('q078','patient_care_safety','medium',
-'When lifting a heavy object, the healthcare worker should:',
-'Al levantar un objeto pesado, el trabajador de salud debe:',
-'Bend at the knees and keep the back straight','Doblar las rodillas y mantener la espalda recta',
-'Bend at the waist','Doblarse por la cintura',
-'Keep legs straight and bend forward','Mantener las piernas rectas y doblarse hacia adelante',
-'Twist the body while lifting','Girar el cuerpo mientras levanta','A',
-'Proper body mechanics require bending at the knees, keeping the back straight, and using leg muscles to lift.',
-'La mecanica corporal adecuada requiere doblar las rodillas, mantener la espalda recta y usar los musculos de las piernas para levantar.');
+INSERT INTO questions VALUES ('q053','phlebotomy_tech','medium',
+'A tourniquet should not be left on for more than:',
+'Un torniquete no debe dejarse puesto por mas de:',
+'1 minute','1 minuto',
+'5 minutes','5 minutos',
+'30 seconds','30 segundos',
+'3 minutes','3 minutos','A',
+'A tourniquet left on for more than 1 minute can cause hemoconcentration, which alters test results.',
+'Un torniquete dejado por mas de 1 minuto puede causar hemoconcentracion, lo cual altera los resultados de las pruebas.');
 
-INSERT INTO questions VALUES ('q079','patient_care_safety','medium',
-'A fire extinguisher is operated using the PASS method. What does PASS stand for?',
-'Un extintor de incendios se opera usando el metodo PASS. Que significa PASS?',
-'Pull, Aim, Squeeze, Sweep','Tirar, Apuntar, Apretar, Barrer',
-'Push, Activate, Spray, Stop','Empujar, Activar, Rociar, Detener',
-'Prepare, Aim, Shoot, Secure','Preparar, Apuntar, Disparar, Asegurar',
-'Pull, Activate, Spray, Secure','Tirar, Activar, Rociar, Asegurar','A',
-'PASS: Pull the pin, Aim at the base of the fire, Squeeze the handle, Sweep from side to side.',
-'PASS: Tirar del pasador, Apuntar a la base del fuego, Apretar la manija, Barrer de lado a lado.');
+INSERT INTO questions VALUES ('q054','phlebotomy_tech','medium',
+'The angle of needle insertion for routine venipuncture is:',
+'El angulo de insercion de la aguja para venopuncion de rutina es:',
+'15-30 degrees','15-30 grados',
+'45-60 degrees','45-60 grados',
+'90 degrees','90 grados',
+'5-10 degrees','5-10 grados','A',
+'The needle should be inserted at a 15-30 degree angle with the bevel up for routine venipuncture.',
+'La aguja debe insertarse en un angulo de 15-30 grados con el bisel hacia arriba para venopuncion de rutina.');
 
-INSERT INTO questions VALUES ('q080','patient_care_safety','easy',
-'Personal Protective Equipment (PPE) includes:',
-'El Equipo de Proteccion Personal (EPP) incluye:',
-'Gloves, gowns, masks, and eye protection','Guantes, batas, mascarillas y proteccion ocular',
-'Only gloves','Solo guantes',
-'Only masks','Solo mascarillas',
-'Stethoscope and thermometer','Estetoscopio y termometro','A',
-'PPE includes gloves, gowns, masks (surgical and N95), face shields, and eye protection, used based on anticipated exposure.',
-'El EPP incluye guantes, batas, mascarillas (quirurgicas y N95), protectores faciales y proteccion ocular, usados segun la exposicion anticipada.');
+INSERT INTO questions VALUES ('q055','phlebotomy_tech','easy',
+'Lavender/purple top tubes contain which anticoagulant?',
+'Los tubos de tapa lavanda/morada contienen cual anticoagulante?',
+'EDTA','EDTA',
+'Sodium citrate','Citrato de sodio',
+'Heparin','Heparina',
+'Potassium oxalate','Oxalato de potasio','A',
+'Lavender/purple top tubes contain EDTA (ethylenediaminetetraacetic acid) and are used for CBC, ESR, and blood bank testing.',
+'Los tubos de tapa lavanda/morada contienen EDTA (acido etilendiaminotetraacetico) y se usan para hemograma, VSG y pruebas de banco de sangre.');
 
-INSERT INTO questions VALUES ('q081','patient_care_safety','medium',
-'An incident report should be completed when:',
-'Un reporte de incidente debe completarse cuando:',
-'Any unexpected event occurs that could harm a patient, visitor, or staff member','Ocurre cualquier evento inesperado que pueda danar a un paciente, visitante o personal',
-'Only when a patient is injured','Solo cuando un paciente resulta lesionado',
-'Only at the end of each shift','Solo al final de cada turno',
-'Only when requested by a supervisor','Solo cuando lo solicita un supervisor','A',
-'Incident reports document any unexpected event — falls, medication errors, equipment failures — to improve safety and reduce future risks.',
-'Los reportes de incidentes documentan cualquier evento inesperado — caidas, errores de medicacion, fallas de equipo — para mejorar la seguridad y reducir riesgos futuros.');
+INSERT INTO questions VALUES ('q056','phlebotomy_tech','medium',
+'A capillary puncture on an infant should be performed on the:',
+'Una puncion capilar en un bebe debe realizarse en:',
+'Medial or lateral plantar surface of the heel','Superficie plantar medial o lateral del talon',
+'Fingertip','Punta del dedo',
+'Earlobe','Lobulo de la oreja',
+'Back of the hand','Dorso de la mano','A',
+'Capillary punctures on infants younger than 1 year are performed on the medial or lateral plantar surface of the heel to avoid the calcaneus bone.',
+'Las punciones capilares en bebes menores de 1 ano se realizan en la superficie plantar medial o lateral del talon para evitar el hueso calcaneo.');
 
-INSERT INTO questions VALUES ('q082','patient_care_safety','hard',
-'Airborne precautions are required for which of the following diseases?',
-'Las precauciones aereas son necesarias para cual de las siguientes enfermedades?',
-'Tuberculosis, measles, and varicella','Tuberculosis, sarampion y varicela',
-'Influenza only','Solo influenza',
-'MRSA only','Solo MRSA',
-'C. difficile only','Solo C. difficile','A',
-'Airborne precautions (negative pressure room, N95 respirator) are required for TB, measles, varicella, and disseminated herpes zoster.',
-'Las precauciones aereas (habitacion de presion negativa, respirador N95) son necesarias para TB, sarampion, varicela y herpes zoster diseminado.');
+INSERT INTO questions VALUES ('q057','phlebotomy_tech','hard',
+'Hemolysis of a blood specimen can be caused by:',
+'La hemolisis de una muestra de sangre puede ser causada por:',
+'Using too small a needle gauge, excessive shaking, or drawing back the plunger too fast','Usar un calibre de aguja muy pequeno, agitacion excesiva o tirar del embolo muy rapido',
+'Using the correct tube','Usar el tubo correcto',
+'Proper centrifugation','Centrifugacion adecuada',
+'Room temperature storage','Almacenamiento a temperatura ambiente','A',
+'Hemolysis (rupture of red blood cells) can be caused by using too small a needle, mixing too vigorously, forcing blood through the needle, or using a syringe incorrectly.',
+'La hemolisis (ruptura de globulos rojos) puede ser causada por usar una aguja muy pequena, mezclar muy vigorosamente, forzar la sangre a traves de la aguja o usar una jeringa incorrectamente.');
 
-INSERT INTO questions VALUES ('q083','patient_care_safety','easy',
-'The correct order for donning PPE is:',
-'El orden correcto para colocarse el EPP es:',
-'Gown, mask/respirator, goggles, gloves','Bata, mascarilla/respirador, gafas, guantes',
-'Gloves, gown, mask, goggles','Guantes, bata, mascarilla, gafas',
-'Mask, gloves, gown, goggles','Mascarilla, guantes, bata, gafas',
-'Goggles, gloves, gown, mask','Gafas, guantes, bata, mascarilla','A',
-'Donning order: gown first, then mask/respirator, then goggles/face shield, then gloves last. Removal is reverse order.',
-'Orden de colocacion: bata primero, luego mascarilla/respirador, luego gafas/protector facial, luego guantes al final. La remocion es en orden inverso.');
+INSERT INTO questions VALUES ('q058','phlebotomy_tech','easy',
+'Before performing a venipuncture, the phlebotomist must:',
+'Antes de realizar una venopuncion, el flebotomista debe:',
+'Verify patient identity using two identifiers','Verificar la identidad del paciente usando dos identificadores',
+'Start drawing blood immediately','Comenzar a extraer sangre inmediatamente',
+'Apply the tourniquet first','Aplicar el torniquete primero',
+'Check insurance information','Verificar informacion del seguro','A',
+'Patient identification using at least two identifiers (name, DOB, MRN) is the first and most critical step before any blood collection procedure.',
+'La identificacion del paciente usando al menos dos identificadores (nombre, fecha de nacimiento, numero de expediente) es el primer y mas critico paso antes de cualquier procedimiento de extraccion de sangre.');
 
-INSERT INTO questions VALUES ('q084','patient_care_safety','medium',
-'A patient is choking and cannot cough, speak, or breathe. The first action is:',
-'Un paciente se esta asfixiando y no puede toser, hablar ni respirar. La primera accion es:',
-'Perform abdominal thrusts (Heimlich maneuver)','Realizar compresiones abdominales (maniobra de Heimlich)',
-'Call 911 and wait','Llamar al 911 y esperar',
-'Give the patient water','Darle agua al paciente',
-'Pat the patient on the back gently','Dar palmaditas suaves en la espalda del paciente','A',
-'For a conscious adult with a complete airway obstruction, perform abdominal thrusts until the object is expelled or the person becomes unconscious.',
-'Para un adulto consciente con obstruccion completa de via aerea, realizar compresiones abdominales hasta que el objeto sea expulsado o la persona pierda la consciencia.');
+INSERT INTO questions VALUES ('q059','phlebotomy_tech','medium',
+'Light blue top tubes are used for:',
+'Los tubos de tapa azul claro se usan para:',
+'Coagulation studies (PT, PTT, INR)','Estudios de coagulacion (TP, TTP, INR)',
+'Complete blood count','Hemograma completo',
+'Blood glucose','Glucosa en sangre',
+'Blood cultures','Hemocultivos','A',
+'Light blue top tubes contain sodium citrate and are used for coagulation testing. They must be filled to the correct volume for accurate results.',
+'Los tubos de tapa azul claro contienen citrato de sodio y se usan para pruebas de coagulacion. Deben llenarse al volumen correcto para resultados precisos.');
 
-INSERT INTO questions VALUES ('q085','patient_care_safety','easy',
-'Sharps (used needles, scalpels) should be disposed of in:',
-'Los objetos punzocortantes (agujas usadas, bisturis) deben desecharse en:',
+INSERT INTO questions VALUES ('q060','phlebotomy_tech','medium',
+'The antiseptic most commonly used to clean the venipuncture site is:',
+'El antiseptico mas comunmente usado para limpiar el sitio de venopuncion es:',
+'70% isopropyl alcohol','Alcohol isopropilico al 70%',
+'Hydrogen peroxide','Peroxido de hidrogeno',
+'Betadine only','Solo betadine',
+'Soap and water','Jabon y agua','A',
+'70% isopropyl alcohol is the standard antiseptic for routine venipuncture. Povidone-iodine (Betadine) is used for blood cultures and blood alcohol testing.',
+'El alcohol isopropilico al 70% es el antiseptico estandar para venopuncion de rutina. Povidona yodada (Betadine) se usa para hemocultivos y pruebas de alcohol en sangre.');
+
+INSERT INTO questions VALUES ('q061','phlebotomy_tech','hard',
+'A hematoma at the venipuncture site is most likely caused by:',
+'Un hematoma en el sitio de venopuncion es mas probablemente causado por:',
+'The needle penetrating through the vein','La aguja penetrando a traves de la vena',
+'Using the correct angle','Usar el angulo correcto',
+'Applying pressure after removal','Aplicar presion despues de la remocion',
+'Using a butterfly needle','Usar una aguja de mariposa','A',
+'Hematomas occur when blood leaks into surrounding tissue, usually from the needle going through both walls of the vein or inadequate pressure after needle removal.',
+'Los hematomas ocurren cuando la sangre se filtra al tejido circundante, usualmente por la aguja atravesando ambas paredes de la vena o presion inadecuada despues de retirar la aguja.');
+
+INSERT INTO questions VALUES ('q062','phlebotomy_tech','easy',
+'After a venipuncture, the patient should apply pressure to the site for at least:',
+'Despues de una venopuncion, el paciente debe aplicar presion al sitio por al menos:',
+'3-5 minutes','3-5 minutos',
+'30 seconds','30 segundos',
+'10 minutes','10 minutos',
+'No pressure is needed','No se necesita presion','A',
+'Pressure should be applied for 3-5 minutes to promote hemostasis. Patients on anticoagulants may need longer pressure.',
+'Se debe aplicar presion por 3-5 minutos para promover la hemostasia. Pacientes con anticoagulantes pueden necesitar presion mas prolongada.');
+
+INSERT INTO questions VALUES ('q063','phlebotomy_tech','medium',
+'A butterfly (winged infusion) needle is preferred for:',
+'Una aguja de mariposa (infusion alada) es preferida para:',
+'Difficult veins, hand veins, pediatric, and elderly patients','Venas dificiles, venas de la mano, pacientes pediatricos y ancianos',
+'All routine blood draws','Todas las extracciones de sangre de rutina',
+'Only IV infusions','Solo infusiones intravenosas',
+'Large volume blood draws only','Solo extracciones de sangre de gran volumen','A',
+'Butterfly needles are ideal for small, fragile, or difficult veins, such as in hand veins, pediatric patients, and elderly patients.',
+'Las agujas de mariposa son ideales para venas pequenas, fragiles o dificiles, como en venas de la mano, pacientes pediatricos y pacientes ancianos.');
+
+INSERT INTO questions VALUES ('q064','phlebotomy_tech','hard',
+'If a patient begins to faint (syncope) during a blood draw, the phlebotomist should:',
+'Si un paciente comienza a desmayarse (sincope) durante una extraccion de sangre, el flebotomista debe:',
+'Remove the needle, apply pressure, lower the patient''s head, and call for help','Retirar la aguja, aplicar presion, bajar la cabeza del paciente y pedir ayuda',
+'Continue the blood draw quickly','Continuar la extraccion rapidamente',
+'Give the patient water immediately','Darle agua al paciente inmediatamente',
+'Leave to get a doctor','Irse a buscar un medico','A',
+'If a patient feels faint: remove the tourniquet and needle, apply pressure, lower their head or lay them down, use cold compresses, and call for assistance.',
+'Si un paciente se siente debil: retirar el torniquete y la aguja, aplicar presion, bajar su cabeza o acostarlo, usar compresas frias y pedir ayuda.');
+
+INSERT INTO questions VALUES ('q065','phlebotomy_tech','easy',
+'The gauge of a needle refers to:',
+'El calibre de una aguja se refiere a:',
+'The diameter of the needle bore — higher numbers mean smaller needles','El diametro del orificio de la aguja — numeros mayores significan agujas mas pequenas',
+'The length of the needle only','Solo la longitud de la aguja',
+'The color of the needle cap','El color de la tapa de la aguja',
+'The type of blood tube used','El tipo de tubo de sangre usado','A',
+'Needle gauge indicates bore diameter. Common gauges: 21G (routine), 22G (smaller veins), 23G (pediatric/butterfly). Higher gauge = smaller needle.',
+'El calibre de aguja indica el diametro del orificio. Calibres comunes: 21G (rutina), 22G (venas pequenas), 23G (pediatrico/mariposa). Mayor calibre = aguja mas pequena.');
+
+INSERT INTO questions VALUES ('q066','phlebotomy_tech','medium',
+'Specimens for blood gas analysis (ABG) must be:',
+'Las muestras para analisis de gases en sangre (ABG) deben:',
+'Transported on ice and analyzed within 30 minutes','Transportarse en hielo y analizarse dentro de 30 minutos',
+'Left at room temperature for 1 hour','Dejarse a temperatura ambiente por 1 hora',
+'Frozen immediately','Congelarse inmediatamente',
+'Centrifuged before transport','Centrifugarse antes del transporte','A',
+'ABG specimens must be placed on ice immediately and analyzed within 30 minutes to prevent metabolism of oxygen and carbon dioxide by blood cells.',
+'Las muestras de ABG deben colocarse en hielo inmediatamente y analizarse dentro de 30 minutos para prevenir el metabolismo de oxigeno y dioxido de carbono por las celulas sanguineas.');
+
+INSERT INTO questions VALUES ('q067','phlebotomy_tech','medium',
+'Which of the following is a preanalytical error in phlebotomy?',
+'Cual de los siguientes es un error preanalitico en flebotomia?',
+'Mislabeling a specimen tube','Etiquetar incorrectamente un tubo de muestra',
+'Using the correct order of draw','Usar el orden correcto de extraccion',
+'Proper centrifugation','Centrifugacion adecuada',
+'Correct test result reporting','Reporte correcto de resultados','A',
+'Preanalytical errors occur before testing: mislabeling, incorrect tube, hemolysis, wrong patient ID, and improper specimen handling.',
+'Los errores preanaliticos ocurren antes de la prueba: etiquetado incorrecto, tubo equivocado, hemolisis, identificacion erronea del paciente y manejo inadecuado de la muestra.');
+
+INSERT INTO questions VALUES ('q068','phlebotomy_tech','easy',
+'Red top tubes (no additive) are used for:',
+'Los tubos de tapa roja (sin aditivo) se usan para:',
+'Serum chemistry tests, serology, and blood bank','Pruebas de quimica de suero, serologia y banco de sangre',
+'CBC only','Solo hemograma',
+'Coagulation studies','Estudios de coagulacion',
+'Blood gas analysis','Analisis de gases en sangre','A',
+'Red top tubes have no anticoagulant and allow blood to clot, producing serum for chemistry tests, serology, and immunohematology.',
+'Los tubos de tapa roja no tienen anticoagulante y permiten que la sangre se coagule, produciendo suero para pruebas de quimica, serologia e inmunohematologia.');
+
+INSERT INTO questions VALUES ('q069','phlebotomy_tech','hard',
+'Chain of custody procedures are required when:',
+'Los procedimientos de cadena de custodia son requeridos cuando:',
+'Collecting specimens for legal or forensic purposes (e.g., drug testing)','Recolectando muestras para propositos legales o forenses (ej. pruebas de drogas)',
+'Drawing blood for a CBC','Extrayendo sangre para un hemograma',
+'Performing a glucose test','Realizando una prueba de glucosa',
+'Collecting routine urine samples','Recolectando muestras de orina de rutina','A',
+'Chain of custody ensures specimen integrity for legal testing: documented collection, sealed containers, signatures at each transfer, and tamper-evident packaging.',
+'La cadena de custodia asegura la integridad de la muestra para pruebas legales: recoleccion documentada, contenedores sellados, firmas en cada transferencia y empaque a prueba de manipulacion.');
+
+INSERT INTO questions VALUES ('q070','phlebotomy_tech','medium',
+'Green top tubes contain which anticoagulant?',
+'Los tubos de tapa verde contienen cual anticoagulante?',
+'Heparin (sodium or lithium)','Heparina (sodio o litio)',
+'EDTA','EDTA',
+'Sodium citrate','Citrato de sodio',
+'No additive','Sin aditivo','A',
+'Green top tubes contain heparin (sodium, lithium, or ammonium) and are used for chemistry tests requiring plasma, ammonia levels, and some special chemistry tests.',
+'Los tubos de tapa verde contienen heparina (sodio, litio o amonio) y se usan para pruebas de quimica que requieren plasma, niveles de amoniaco y algunas pruebas de quimica especial.');
+
+INSERT INTO questions VALUES ('q071','phlebotomy_tech','easy',
+'After completing a blood draw, used needles should be disposed of in:',
+'Despues de completar una extraccion de sangre, las agujas usadas deben desecharse en:',
 'A puncture-resistant sharps container','Un contenedor de punzocortantes resistente a perforaciones',
 'The regular trash','La basura regular',
 'A biohazard bag','Una bolsa de riesgo biologico',
-'By recapping and placing in the trash','Tapando y colocando en la basura','A',
-'Used sharps must be immediately placed in a puncture-resistant, labeled sharps container. Never recap needles.',
-'Los punzocortantes usados deben colocarse inmediatamente en un contenedor de punzocortantes resistente a perforaciones y etiquetado. Nunca tape las agujas.');
+'The patient''s bedside table','La mesa de noche del paciente','A',
+'Used needles must be immediately placed in a puncture-resistant, labeled sharps container at the point of use. Never recap needles.',
+'Las agujas usadas deben colocarse inmediatamente en un contenedor de punzocortantes resistente a perforaciones y etiquetado en el punto de uso. Nunca tape las agujas.');
 
-INSERT INTO questions VALUES ('q086','patient_care_safety','medium',
-'When using a wheelchair for patient transport, the healthcare worker should:',
-'Al usar una silla de ruedas para transportar pacientes, el trabajador de salud debe:',
-'Lock the brakes before the patient sits or stands','Bloquear los frenos antes de que el paciente se siente o se pare',
-'Push the wheelchair as fast as possible','Empujar la silla lo mas rapido posible',
-'Leave the footrests down while transferring','Dejar los reposapiés abajo mientras se transfiere',
-'Allow the patient to stand on the footrests','Permitir que el paciente se pare en los reposapiés','A',
-'Always lock wheelchair brakes before transfers to prevent the chair from rolling. Footrests should be raised during transfers.',
-'Siempre bloquear los frenos de la silla antes de transferencias para evitar que la silla ruede. Los reposapiés deben estar levantados durante las transferencias.');
+INSERT INTO questions VALUES ('q072','phlebotomy_tech','medium',
+'The term "phlebotomy" literally means:',
+'El termino "flebotomia" literalmente significa:',
+'Incision of a vein','Incision de una vena',
+'Drawing blood','Extraccion de sangre',
+'Puncture of an artery','Puncion de una arteria',
+'Collection of specimens','Recoleccion de muestras','A',
+'Phlebotomy comes from Greek: phlebo (vein) + tomy (incision/cut). It refers to the practice of making an incision in a vein for blood collection.',
+'Flebotomia viene del griego: flebo (vena) + tomia (incision/corte). Se refiere a la practica de hacer una incision en una vena para recoleccion de sangre.');
 
-INSERT INTO questions VALUES ('q087','patient_care_safety','hard',
-'The concept of "sentinel event" refers to:',
-'El concepto de "evento centinela" se refiere a:',
-'An unexpected event that results in death or serious injury','Un evento inesperado que resulta en muerte o lesion grave',
-'A scheduled surgery','Una cirugia programada',
-'A routine medication administration','Una administracion rutinaria de medicamentos',
-'A patient complaint','Una queja de un paciente','A',
-'A sentinel event is an unexpected occurrence involving death or serious physical/psychological injury. It requires a root cause analysis.',
-'Un evento centinela es un suceso inesperado que involucra muerte o lesion fisica/psicologica grave. Requiere un analisis de causa raiz.');
+INSERT INTO questions VALUES ('q073','phlebotomy_tech','hard',
+'Which condition would require a phlebotomist to avoid using a patient''s arm for venipuncture?',
+'Que condicion requeriria que un flebotomista evite usar el brazo de un paciente para venopuncion?',
+'An IV line running in that arm, mastectomy on that side, or an AV fistula','Una linea IV en ese brazo, mastectomia en ese lado o una fistula AV',
+'A small bruise from a previous draw','Un pequeno moreton de una extraccion anterior',
+'The patient is right-handed','El paciente es diestro',
+'The patient is wearing long sleeves','El paciente usa mangas largas','A',
+'Do not draw from an arm with an IV (contamination risk), on the mastectomy side (lymphedema risk), or near an AV fistula/graft (dialysis access).',
+'No extraer de un brazo con IV (riesgo de contaminacion), del lado de la mastectomia (riesgo de linfedema) o cerca de una fistula/injerto AV (acceso de dialisis).');
 
-INSERT INTO questions VALUES ('q088','patient_care_safety','easy',
-'Contact precautions require the healthcare worker to wear:',
-'Las precauciones de contacto requieren que el trabajador de salud use:',
-'Gloves and a gown','Guantes y bata',
-'Only a mask','Solo mascarilla',
-'Only gloves','Solo guantes',
-'N95 respirator and goggles','Respirador N95 y gafas','A',
-'Contact precautions require gloves and gown for any patient contact. Used for MRSA, VRE, C. difficile, and other contact-transmitted organisms.',
-'Las precauciones de contacto requieren guantes y bata para cualquier contacto con el paciente. Se usan para MRSA, VRE, C. difficile y otros organismos transmitidos por contacto.');
+INSERT INTO questions VALUES ('q074','phlebotomy_tech','easy',
+'Blood culture specimens require which type of site preparation?',
+'Las muestras de hemocultivo requieren que tipo de preparacion del sitio?',
+'Antiseptic scrub with chlorhexidine or povidone-iodine','Limpieza antiseptica con clorhexidina o povidona yodada',
+'Regular alcohol swab only','Solo algodol con alcohol regular',
+'No preparation needed','No se necesita preparacion',
+'Soap and water','Jabon y agua','A',
+'Blood cultures require thorough antiseptic preparation (chlorhexidine or povidone-iodine) to prevent contamination by skin flora.',
+'Los hemocultivos requieren preparacion antiseptica completa (clorhexidina o povidona yodada) para prevenir contaminacion por flora de la piel.');
 
-INSERT INTO questions VALUES ('q089','patient_care_safety','medium',
-'When communicating with a patient who has hearing loss, the healthcare worker should:',
-'Al comunicarse con un paciente con perdida auditiva, el trabajador de salud debe:',
-'Face the patient directly and speak clearly at a normal pace','Mirar al paciente directamente y hablar claramente a un ritmo normal',
-'Shout loudly','Gritar fuerte',
-'Stand behind the patient','Pararse detras del paciente',
-'Write everything down without speaking','Escribir todo sin hablar','A',
-'Face the patient, maintain eye contact, speak clearly (not shouting), use gestures, and minimize background noise.',
-'Mirar al paciente, mantener contacto visual, hablar claramente (sin gritar), usar gestos y minimizar el ruido de fondo.');
-
-INSERT INTO questions VALUES ('q090','patient_care_safety','easy',
-'The purpose of patient identification (using two identifiers) before any procedure is to:',
-'El proposito de la identificacion del paciente (usando dos identificadores) antes de cualquier procedimiento es:',
-'Prevent medical errors by ensuring the correct patient receives care','Prevenir errores medicos asegurando que el paciente correcto reciba atencion',
-'Speed up the registration process','Acelerar el proceso de registro',
-'Comply with insurance requirements only','Cumplir solo con requisitos del seguro',
-'Satisfy hospital accreditation standards only','Solo satisfacer estandares de acreditacion hospitalaria','A',
-'Two patient identifiers (name, DOB, MRN) must be verified before administering medications, blood, or performing procedures to prevent errors.',
-'Dos identificadores del paciente (nombre, fecha de nacimiento, numero de expediente) deben verificarse antes de administrar medicamentos, sangre o realizar procedimientos para prevenir errores.');
-
-INSERT INTO questions VALUES ('q091','patient_care_safety','medium',
-'Bloodborne pathogen exposure from a needlestick requires the healthcare worker to:',
-'La exposicion a patogenos transmitidos por sangre por un pinchazo de aguja requiere que el trabajador de salud:',
-'Wash the area immediately and report to supervisor/occupational health','Lave el area inmediatamente y reporte al supervisor/salud ocupacional',
-'Apply a bandage and continue working','Aplique un vendaje y continue trabajando',
-'Ignore it if wearing gloves','Lo ignore si usaba guantes',
-'Wait until the end of the shift to report','Espere hasta el final del turno para reportar','A',
-'After a needlestick: immediately wash with soap and water, report to supervisor, seek medical evaluation, and complete an incident report.',
-'Despues de un pinchazo: lavar inmediatamente con jabon y agua, reportar al supervisor, buscar evaluacion medica y completar un reporte de incidente.');
-
-INSERT INTO questions VALUES ('q092','patient_care_safety','hard',
-'Ergonomic principles in healthcare include:',
-'Los principios ergonomicos en salud incluyen:',
-'Adjusting the work environment to reduce strain and prevent injury','Ajustar el ambiente de trabajo para reducir tension y prevenir lesiones',
-'Working as fast as possible regardless of body position','Trabajar lo mas rapido posible sin importar la posicion del cuerpo',
-'Using manual lifting for all patients','Usar levantamiento manual para todos los pacientes',
-'Ignoring repetitive motion symptoms','Ignorar sintomas de movimiento repetitivo','A',
-'Ergonomics adapts the workplace to the worker: proper workstation height, mechanical lifts, anti-fatigue mats, and breaks to prevent musculoskeletal injuries.',
-'La ergonomia adapta el lugar de trabajo al trabajador: altura adecuada de estacion, elevadores mecanicos, tapetes antifatiga y descansos para prevenir lesiones musculoesqueleticas.');
-
-INSERT INTO questions VALUES ('q093','patient_care_safety','easy',
-'A Material Safety Data Sheet (MSDS/SDS) provides information about:',
-'Una Hoja de Datos de Seguridad (MSDS/SDS) proporciona informacion sobre:',
-'Hazardous chemicals in the workplace','Quimicos peligrosos en el lugar de trabajo',
-'Patient medications','Medicamentos del paciente',
-'Employee schedules','Horarios de empleados',
-'Insurance coverage','Cobertura de seguros','A',
-'SDS (Safety Data Sheets) provide detailed information about hazardous chemicals: properties, health hazards, first aid, storage, and spill procedures.',
-'Las SDS (Hojas de Datos de Seguridad) proporcionan informacion detallada sobre quimicos peligrosos: propiedades, riesgos a la salud, primeros auxilios, almacenamiento y procedimientos de derrames.');
-
-INSERT INTO questions VALUES ('q094','patient_care_safety','medium',
-'The healthcare professional should use therapeutic communication by:',
-'El profesional de salud debe usar comunicacion terapeutica mediante:',
-'Actively listening and using open-ended questions','Escuchar activamente y usar preguntas abiertas',
-'Giving personal opinions and advice','Dar opiniones personales y consejos',
-'Interrupting the patient to save time','Interrumpir al paciente para ahorrar tiempo',
-'Using medical jargon extensively','Usar jerga medica extensamente','A',
-'Therapeutic communication includes active listening, open-ended questions, empathy, reflecting, and clarifying to build rapport and understanding.',
-'La comunicacion terapeutica incluye escucha activa, preguntas abiertas, empatia, reflexion y clarificacion para construir rapport y comprension.');
-
-INSERT INTO questions VALUES ('q095','patient_care_safety','hard',
-'The principle of informed consent requires:',
-'El principio de consentimiento informado requiere:',
-'That the patient understands the procedure, risks, benefits, and alternatives before agreeing','Que el paciente entienda el procedimiento, riesgos, beneficios y alternativas antes de aceptar',
-'Only a signature on a form','Solo una firma en un formulario',
-'Verbal agreement without explanation','Acuerdo verbal sin explicacion',
-'Consent from the insurance company','Consentimiento de la compania de seguros','A',
-'Informed consent requires disclosure of the procedure, risks, benefits, alternatives, and the right to refuse, ensuring the patient can make a voluntary decision.',
-'El consentimiento informado requiere divulgacion del procedimiento, riesgos, beneficios, alternativas y el derecho a rechazar, asegurando que el paciente pueda tomar una decision voluntaria.');
-
-INSERT INTO questions VALUES ('q096','patient_care_safety','easy',
-'Universal precautions were designed primarily to prevent transmission of:',
-'Las precauciones universales fueron disenadas principalmente para prevenir la transmision de:',
-'Bloodborne pathogens such as HIV and Hepatitis B','Patogenos transmitidos por sangre como VIH y Hepatitis B',
-'Airborne diseases only','Solo enfermedades aereas',
-'Foodborne illnesses','Enfermedades transmitidas por alimentos',
-'Waterborne diseases','Enfermedades transmitidas por agua','A',
-'Universal precautions were developed to prevent transmission of bloodborne pathogens (HIV, HBV, HCV) through blood and body fluids.',
-'Las precauciones universales fueron desarrolladas para prevenir la transmision de patogenos sanguineos (VIH, VHB, VHC) a traves de sangre y fluidos corporales.');
-
-INSERT INTO questions VALUES ('q097','patient_care_safety','medium',
-'When a patient falls, the healthcare worker should first:',
-'Cuando un paciente se cae, el trabajador de salud debe primero:',
-'Stay with the patient and assess for injuries','Quedarse con el paciente y evaluar lesiones',
-'Help the patient stand up immediately','Ayudar al paciente a levantarse inmediatamente',
-'Leave to get help','Irse a buscar ayuda',
-'Fill out the incident report','Llenar el reporte de incidente','A',
-'First priority: stay with the patient, do not move them, assess for injuries. Then call for help and complete an incident report.',
-'Primera prioridad: quedarse con el paciente, no moverlo, evaluar lesiones. Luego llamar por ayuda y completar un reporte de incidente.');
-
-INSERT INTO questions VALUES ('q098','patient_care_safety','medium',
-'The correct hand hygiene technique with alcohol-based hand rub requires:',
-'La tecnica correcta de higiene de manos con gel a base de alcohol requiere:',
-'Rubbing all surfaces of hands until dry (about 20 seconds)','Frotar todas las superficies de las manos hasta secar (aproximadamente 20 segundos)',
-'A quick dab on the palms','Una aplicacion rapida en las palmas',
-'Rinsing with water after application','Enjuagar con agua despues de la aplicacion',
-'Using paper towels to dry','Usar toallas de papel para secar','A',
-'Apply sufficient product, rub all surfaces (palms, backs, between fingers, fingertips, thumbs) until completely dry. No rinsing needed.',
-'Aplicar suficiente producto, frotar todas las superficies (palmas, dorsos, entre dedos, puntas, pulgares) hasta secar completamente. No se necesita enjuagar.');
-
-INSERT INTO questions VALUES ('q099','patient_care_safety','hard',
-'The ethical principle of "beneficence" means:',
-'El principio etico de "beneficencia" significa:',
-'Acting in the best interest of the patient','Actuar en el mejor interes del paciente',
-'Doing no harm','No hacer dano',
-'Treating all patients equally','Tratar a todos los pacientes por igual',
-'Respecting patient autonomy','Respetar la autonomia del paciente','A',
-'Beneficence is the duty to promote good and act in the patient''s best interest. It differs from non-maleficence (do no harm).',
-'La beneficencia es el deber de promover el bien y actuar en el mejor interes del paciente. Se diferencia de la no maleficencia (no hacer dano).');
-
-INSERT INTO questions VALUES ('q100','patient_care_safety','easy',
-'The abbreviation "STAT" means:',
-'La abreviatura "STAT" significa:',
-'Immediately','Inmediatamente',
-'Scheduled','Programado',
-'Standing order','Orden permanente',
-'Standard treatment','Tratamiento estandar','A',
-'STAT = statim = immediately/at once. Used when an order needs to be carried out right away.',
-'STAT = statim = inmediatamente/de una vez. Se usa cuando una orden necesita ejecutarse de inmediato.');
+INSERT INTO questions VALUES ('q075','phlebotomy_tech','medium',
+'The term "lipemia" in a blood specimen refers to:',
+'El termino "lipemia" en una muestra de sangre se refiere a:',
+'A milky or cloudy appearance due to high fat content','Una apariencia lechosa o turbia debido a alto contenido de grasa',
+'A clear and normal sample','Una muestra clara y normal',
+'Red-tinged serum from hemolysis','Suero con tono rojizo por hemolisis',
+'A dark-colored specimen from dehydration','Una muestra de color oscuro por deshidratacion','A',
+'Lipemia causes a milky/turbid appearance in serum or plasma due to high triglyceride levels, often from eating before a fasting test.',
+'La lipemia causa una apariencia lechosa/turbia en suero o plasma debido a altos niveles de trigliceridos, frecuentemente por comer antes de una prueba en ayunas.');
 
 -- ═══════════════════════════════════════════════════════════════════
--- FLASHCARDS — 40 total (10 per domain)
+-- FLASHCARDS — 30 total (10 per certification)
 -- ═══════════════════════════════════════════════════════════════════
 
 -- Medical Assisting Flashcards
@@ -1050,26 +796,15 @@ INSERT INTO flashcards VALUES ('f018','pharmacy_tech','What does USP 797 regulat
 INSERT INTO flashcards VALUES ('f019','pharmacy_tech','What is the generic name for Zithromax?','Cual es el nombre generico de Zithromax?','Azithromycin','Azitromicina');
 INSERT INTO flashcards VALUES ('f020','pharmacy_tech','What does "ac" mean on a prescription?','Que significa "ac" en una receta?','Before meals (ante cibum)','Antes de las comidas (ante cibum)');
 
--- Health Information Technology Flashcards
-INSERT INTO flashcards VALUES ('f021','health_info_tech','What does HIPAA protect?','Que protege HIPAA?','Protected Health Information (PHI) — patient privacy and data security','Informacion de Salud Protegida (PHI) — privacidad del paciente y seguridad de datos');
-INSERT INTO flashcards VALUES ('f022','health_info_tech','What is ICD-10-CM used for?','Para que se usa ICD-10-CM?','Diagnosis coding in all healthcare settings','Codificacion de diagnosticos en todos los entornos de salud');
-INSERT INTO flashcards VALUES ('f023','health_info_tech','What is CPT used for?','Para que se usa CPT?','Coding medical procedures and services for billing','Codificar procedimientos y servicios medicos para facturacion');
-INSERT INTO flashcards VALUES ('f024','health_info_tech','What are the 18 HIPAA identifiers?','Cuales son los 18 identificadores de HIPAA?','Name, DOB, SSN, address, phone, email, MRN, account numbers, and others that can identify a patient','Nombre, fecha de nacimiento, SSN, direccion, telefono, correo, numero de expediente, numeros de cuenta y otros que pueden identificar a un paciente');
-INSERT INTO flashcards VALUES ('f025','health_info_tech','What does SOAP stand for in medical charting?','Que significa SOAP en expedientes medicos?','Subjective, Objective, Assessment, Plan','Subjetivo, Objetivo, Evaluacion, Plan');
-INSERT INTO flashcards VALUES ('f026','health_info_tech','What is a DRG?','Que es un DRG?','Diagnosis Related Group — used for Medicare inpatient hospital reimbursement','Grupo Relacionado con el Diagnostico — usado para reembolso hospitalario de internacion de Medicare');
-INSERT INTO flashcards VALUES ('f027','health_info_tech','What is an EHR?','Que es un EHR?','Electronic Health Record — a digital patient chart shareable across organizations','Expediente Electronico de Salud — un expediente digital del paciente compartible entre organizaciones');
-INSERT INTO flashcards VALUES ('f028','health_info_tech','What is the HITECH Act?','Que es la Ley HITECH?','Health Information Technology for Economic and Clinical Health Act — strengthened HIPAA and promoted EHR adoption','Ley de Tecnologia de Informacion de Salud para la Salud Economica y Clinica — fortalecio HIPAA y promovio la adopcion de EHR');
-INSERT INTO flashcards VALUES ('f029','health_info_tech','What is the minimum necessary standard?','Que es el estandar de minimo necesario?','Access only the minimum PHI needed to perform your job duties','Acceder solo al minimo de PHI necesario para realizar tus funciones laborales');
-INSERT INTO flashcards VALUES ('f030','health_info_tech','What is revenue cycle management?','Que es la gestion del ciclo de ingresos?','The process from patient scheduling through final payment collection','El proceso desde la programacion del paciente hasta la recoleccion final del pago');
+-- Phlebotomy Technician Flashcards
+INSERT INTO flashcards VALUES ('f021','phlebotomy_tech','What is the most commonly used vein for venipuncture?','Cual es la vena mas comunmente usada para venopuncion?','Median cubital vein in the antecubital fossa','Vena cubital mediana en la fosa antecubital');
+INSERT INTO flashcards VALUES ('f022','phlebotomy_tech','What is the correct order of draw?','Cual es el orden correcto de extraccion?','Blood cultures, Light blue (citrate), Red/Gold (SST), Green (heparin), Lavender (EDTA), Gray (oxalate/fluoride)','Hemocultivos, Azul claro (citrato), Rojo/Dorado (SST), Verde (heparina), Lavanda (EDTA), Gris (oxalato/fluoruro)');
+INSERT INTO flashcards VALUES ('f023','phlebotomy_tech','What does a lavender/purple top tube contain?','Que contiene un tubo de tapa lavanda/morada?','EDTA anticoagulant — used for CBC, ESR, and blood bank testing','Anticoagulante EDTA — usado para hemograma, VSG y pruebas de banco de sangre');
+INSERT INTO flashcards VALUES ('f024','phlebotomy_tech','What angle should the needle be inserted for venipuncture?','A que angulo debe insertarse la aguja para venopuncion?','15-30 degrees with bevel facing up','15-30 grados con el bisel hacia arriba');
+INSERT INTO flashcards VALUES ('f025','phlebotomy_tech','How long should a tourniquet be left on?','Cuanto tiempo debe dejarse un torniquete?','No more than 1 minute to prevent hemoconcentration','No mas de 1 minuto para prevenir hemoconcentracion');
+INSERT INTO flashcards VALUES ('f026','phlebotomy_tech','What is hemolysis?','Que es la hemolisis?','The rupture of red blood cells, causing a reddish tint in serum — invalidates many test results','La ruptura de globulos rojos, causando un tono rojizo en el suero — invalida muchos resultados de pruebas');
+INSERT INTO flashcards VALUES ('f027','phlebotomy_tech','What two patient identifiers must be verified before a blood draw?','Que dos identificadores del paciente deben verificarse antes de una extraccion de sangre?','Patient name and date of birth (or medical record number)','Nombre del paciente y fecha de nacimiento (o numero de expediente medico)');
+INSERT INTO flashcards VALUES ('f028','phlebotomy_tech','What antiseptic is used for blood culture collection?','Que antiseptico se usa para la recoleccion de hemocultivos?','Chlorhexidine or povidone-iodine (not regular alcohol)','Clorhexidina o povidona yodada (no alcohol regular)');
+INSERT INTO flashcards VALUES ('f029','phlebotomy_tech','Where should capillary punctures be performed on infants?','Donde deben realizarse las punciones capilares en bebes?','Medial or lateral plantar surface of the heel','Superficie plantar medial o lateral del talon');
+INSERT INTO flashcards VALUES ('f030','phlebotomy_tech','What does "phlebotomy" literally mean?','Que significa literalmente "flebotomia"?','Incision of a vein (from Greek: phlebo = vein, tomy = incision)','Incision de una vena (del griego: flebo = vena, tomia = incision)');
 
--- Patient Care & Safety Flashcards
-INSERT INTO flashcards VALUES ('f031','patient_care_safety','What does RACE stand for in a fire emergency?','Que significa RACE en una emergencia de incendio?','Rescue, Alarm, Contain, Extinguish/Evacuate','Rescatar, Alarma, Contener, Extinguir/Evacuar');
-INSERT INTO flashcards VALUES ('f032','patient_care_safety','What does PASS stand for (fire extinguisher)?','Que significa PASS (extintor de incendios)?','Pull, Aim, Squeeze, Sweep','Tirar, Apuntar, Apretar, Barrer');
-INSERT INTO flashcards VALUES ('f033','patient_care_safety','What are Standard Precautions?','Que son las Precauciones Estandar?','Infection prevention practices used with ALL patients regardless of diagnosis','Practicas de prevencion de infecciones usadas con TODOS los pacientes sin importar el diagnostico');
-INSERT INTO flashcards VALUES ('f034','patient_care_safety','What PPE is needed for Contact Precautions?','Que EPP se necesita para Precauciones de Contacto?','Gloves and gown','Guantes y bata');
-INSERT INTO flashcards VALUES ('f035','patient_care_safety','What are the four ethical principles in healthcare?','Cuales son los cuatro principios eticos en salud?','Autonomy, Beneficence, Non-maleficence, Justice','Autonomia, Beneficencia, No maleficencia, Justicia');
-INSERT INTO flashcards VALUES ('f036','patient_care_safety','What is informed consent?','Que es el consentimiento informado?','Patient understands and agrees to a procedure after learning about risks, benefits, and alternatives','El paciente entiende y acepta un procedimiento despues de conocer riesgos, beneficios y alternativas');
-INSERT INTO flashcards VALUES ('f037','patient_care_safety','What are the links in the Chain of Infection?','Cuales son los eslabones de la Cadena de Infeccion?','Infectious agent, Reservoir, Portal of exit, Mode of transmission, Portal of entry, Susceptible host','Agente infeccioso, Reservorio, Puerta de salida, Modo de transmision, Puerta de entrada, Huesped susceptible');
-INSERT INTO flashcards VALUES ('f038','patient_care_safety','What is a sentinel event?','Que es un evento centinela?','An unexpected event resulting in death or serious physical/psychological injury','Un evento inesperado que resulta en muerte o lesion fisica/psicologica grave');
-INSERT INTO flashcards VALUES ('f039','patient_care_safety','How should sharps be disposed of?','Como deben desecharse los punzocortantes?','In a puncture-resistant, labeled sharps container — never recap needles','En un contenedor de punzocortantes resistente a perforaciones y etiquetado — nunca tape las agujas');
-INSERT INTO flashcards VALUES ('f040','patient_care_safety','What are two patient identifiers used before procedures?','Cuales son dos identificadores del paciente usados antes de procedimientos?','Patient name and date of birth (or medical record number)','Nombre del paciente y fecha de nacimiento (o numero de expediente medico)');

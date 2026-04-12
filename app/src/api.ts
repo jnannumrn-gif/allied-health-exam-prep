@@ -31,6 +31,7 @@ export interface User {
   name: string;
   language: string;
   exam_date: string | null;
+  certification: string;
 }
 
 export interface Question {
@@ -90,7 +91,7 @@ export interface UserStats {
 }
 
 const api = {
-  register: (data: { email: string; password: string; name: string; language: string; exam_date: string | null }) =>
+  register: (data: { email: string; password: string; name: string; language: string; exam_date: string | null; certification?: string }) =>
     request<{ token: string; user: User }>("/api/auth/register", {
       method: "POST",
       body: JSON.stringify(data),
