@@ -6,6 +6,7 @@ import {
   Stethoscope,
   Pill,
   Droplets,
+  HeartPulse,
   Bot,
   User,
   Lock,
@@ -165,9 +166,54 @@ Jamas inventes informacion clinica. Si algo requiere validacion institucional, d
 Manten un tono profesional, calido y pedagogico — como un colega con 30 anos de experiencia que genuinamente quiere que el estudiante entienda.`,
     },
   },
+  {
+    id: "cna",
+    nameKey: "tutor.cna",
+    descKey: "tutor.cna_desc",
+    icon: HeartPulse,
+    color: "text-blue-400",
+    borderColor: "border-blue-500/30",
+    bgColor: "bg-blue-500/10",
+    topics: {
+      en: ["Patient Care", "Vital Signs", "Infection Control", "Safety", "ADLs", "Communication", "Exam Prep"],
+      es: ["Cuidado del Paciente", "Signos Vitales", "Control de Infecciones", "Seguridad", "AVD", "Comunicacion", "Prep. de Examen"],
+    },
+    suggestions: {
+      en: [
+        "What are the key responsibilities of a CNA?",
+        "How do I properly take and record vital signs?",
+        "Explain the correct hand hygiene and infection control procedures",
+        "What are activities of daily living (ADLs) and how do CNAs assist?",
+      ],
+      es: [
+        "Cuales son las responsabilidades clave de un CNA?",
+        "Como tomo y registro correctamente los signos vitales?",
+        "Explicame los procedimientos correctos de higiene de manos y control de infecciones",
+        "Que son las actividades de la vida diaria (AVD) y como asiste el CNA?",
+      ],
+    },
+    systemPrompt: {
+      en: `You are a clinical tutor specialized in Certified Nursing Assistant (CNA) preparation for Allied Health Exam Prep. Your mission is to teach patient care skills, vital signs measurement, infection control, safety procedures, activities of daily living (ADLs), communication with patients and healthcare team, body mechanics, nutrition, and CNA exam preparation — clearly, deeply, and with real clinical reasoning.
+
+Respond in English by default. If the user writes in Spanish, respond in Spanish.
+Use accessible but technically precise language.
+When helpful, structure your response with key points or steps.
+At the end of longer responses, you may add a reflection question in exam style.
+Never fabricate clinical information. If something requires institutional validation, say so.
+Maintain a professional, warm, and pedagogical tone — like a colleague with 30 years of experience who genuinely wants the student to understand.`,
+      es: `Eres un tutor clinico especializado en preparacion de Asistente de Enfermeria Certificado (CNA) para Allied Health Exam Prep. Tu mision es ensenar habilidades de cuidado del paciente, toma de signos vitales, control de infecciones, procedimientos de seguridad, actividades de la vida diaria (AVD), comunicacion con pacientes y equipo de salud, mecanica corporal, nutricion y preparacion para el examen CNA — de manera clara, profunda y con razonamiento clinico real.
+
+Responde siempre en espanol a menos que el usuario escriba en ingles.
+Usa lenguaje accesible pero tecnicamente preciso.
+Cuando sea util, estructura tu respuesta con puntos clave o pasos.
+Al final de respuestas largas, puedes agregar una pregunta de reflexion tipo examen.
+Jamas inventes informacion clinica. Si algo requiere validacion institucional, dilo.
+Manten un tono profesional, calido y pedagogico — como un colega con 30 anos de experiencia que genuinamente quiere que el estudiante entienda.`,
+    },
+  },
 ];
 
-const ACTIVE_CERT_IDS = ["medical_assisting"];
+const ACTIVE_CERT_IDS = ["medical_assisting", "cna"];
 
 function formatResponse(text: string): string {
   let formatted = text;
@@ -304,7 +350,7 @@ export default function Tutor() {
             <p className="text-gray-400 text-lg">{t("tutor.select_prompt")}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {DIVISIONS.map((div) => {
               const isActive = ACTIVE_CERT_IDS.includes(div.id);
               return (

@@ -1,9 +1,10 @@
 -- Allied Health Exam Prep Seed Data: Questions & Flashcards (Bilingual EN/ES)
--- 75 questions across 3 certifications + 30 flashcards
+-- 100 questions across 4 certifications + 40 flashcards
 
 -- CERTIFICATION: medical_assisting (Medical Assistant - CMA/RMA) - 25 questions
 -- CERTIFICATION: pharmacy_tech (Pharmacy Technician - PTCB/ExCPT) - 25 questions
 -- CERTIFICATION: phlebotomy_tech (Phlebotomy Technician - CPT/PBT) - 25 questions
+-- CERTIFICATION: cna (Certified Nursing Assistant - CNA) - 25 questions
 
 -- ═══════════════════════════════════════════════════════════════════
 -- DOMAIN: medical_assisting — 25 questions
@@ -807,4 +808,270 @@ INSERT INTO flashcards VALUES ('f027','phlebotomy_tech','What two patient identi
 INSERT INTO flashcards VALUES ('f028','phlebotomy_tech','What antiseptic is used for blood culture collection?','Que antiseptico se usa para la recoleccion de hemocultivos?','Chlorhexidine or povidone-iodine (not regular alcohol)','Clorhexidina o povidona yodada (no alcohol regular)');
 INSERT INTO flashcards VALUES ('f029','phlebotomy_tech','Where should capillary punctures be performed on infants?','Donde deben realizarse las punciones capilares en bebes?','Medial or lateral plantar surface of the heel','Superficie plantar medial o lateral del talon');
 INSERT INTO flashcards VALUES ('f030','phlebotomy_tech','What does "phlebotomy" literally mean?','Que significa literalmente "flebotomia"?','Incision of a vein (from Greek: phlebo = vein, tomy = incision)','Incision de una vena (del griego: flebo = vena, tomia = incision)');
+
+-- ═══════════════════════════════════════════════════════════════════
+-- DOMAIN: cna — 25 questions
+-- ═══════════════════════════════════════════════════════════════════
+
+INSERT INTO questions VALUES ('q076','cna','easy',
+'How often should a CNA reposition a bedridden patient to prevent pressure ulcers?',
+'Con que frecuencia debe un CNA reposicionar a un paciente encamado para prevenir ulceras por presion?',
+'Every 2 hours','Cada 2 horas',
+'Every 8 hours','Cada 8 horas',
+'Once per shift','Una vez por turno',
+'Every 4 hours','Cada 4 horas','A',
+'Repositioning every 2 hours helps redistribute pressure and prevent skin breakdown and pressure ulcers.',
+'Reposicionar cada 2 horas ayuda a redistribuir la presion y prevenir la ruptura de la piel y ulceras por presion.');
+
+INSERT INTO questions VALUES ('q077','cna','easy',
+'What is the normal range for adult oral temperature?',
+'Cual es el rango normal de temperatura oral en adultos?',
+'97.6°F - 99.6°F (36.4°C - 37.6°C)','97.6°F - 99.6°F (36.4°C - 37.6°C)',
+'95.0°F - 97.0°F (35.0°C - 36.1°C)','95.0°F - 97.0°F (35.0°C - 36.1°C)',
+'100.0°F - 102.0°F (37.8°C - 38.9°C)','100.0°F - 102.0°F (37.8°C - 38.9°C)',
+'94.0°F - 96.0°F (34.4°C - 35.6°C)','94.0°F - 96.0°F (34.4°C - 35.6°C)','A',
+'Normal oral temperature for adults ranges from 97.6°F to 99.6°F (36.4°C to 37.6°C). Temperatures above 100.4°F are considered fever.',
+'La temperatura oral normal para adultos varia de 97.6°F a 99.6°F (36.4°C a 37.6°C). Temperaturas por encima de 100.4°F se consideran fiebre.');
+
+INSERT INTO questions VALUES ('q078','cna','medium',
+'When assisting a resident with eating, the CNA should:',
+'Al asistir a un residente con la alimentacion, el CNA debe:',
+'Sit at eye level and offer small bites, allowing time to chew','Sentarse a nivel de los ojos y ofrecer bocados pequenos, permitiendo tiempo para masticar',
+'Stand over the resident and feed quickly to save time','Pararse sobre el residente y alimentar rapido para ahorrar tiempo',
+'Mix all foods together for convenience','Mezclar todos los alimentos juntos por conveniencia',
+'Feed the resident while they are lying flat','Alimentar al residente mientras esta acostado','A',
+'Sitting at eye level promotes dignity and communication. Small bites and allowing time to chew prevents aspiration.',
+'Sentarse a nivel de los ojos promueve la dignidad y comunicacion. Bocados pequenos y permitir tiempo para masticar previene la aspiracion.');
+
+INSERT INTO questions VALUES ('q079','cna','easy',
+'The most important action a CNA can take to prevent the spread of infection is:',
+'La accion mas importante que un CNA puede tomar para prevenir la propagacion de infecciones es:',
+'Proper hand washing','Lavado de manos adecuado',
+'Wearing a mask at all times','Usar mascarilla en todo momento',
+'Avoiding all patient contact','Evitar todo contacto con pacientes',
+'Taking antibiotics daily','Tomar antibioticos diariamente','A',
+'Hand washing is the single most effective way to prevent the spread of infection in healthcare settings.',
+'El lavado de manos es la forma individual mas efectiva de prevenir la propagacion de infecciones en entornos de salud.');
+
+INSERT INTO questions VALUES ('q080','cna','medium',
+'When using a mechanical lift to transfer a patient, the CNA should:',
+'Al usar un elevador mecanico para transferir a un paciente, el CNA debe:',
+'Check the weight limit and ensure the sling is properly positioned','Verificar el limite de peso y asegurar que el arnes este correctamente posicionado',
+'Operate the lift alone to save time','Operar el elevador solo para ahorrar tiempo',
+'Lift the patient as high as possible for clearance','Elevar al paciente lo mas alto posible para tener espacio',
+'Skip checking the equipment if it was used recently','Omitir la revision del equipo si se uso recientemente','A',
+'Always check weight limits and proper sling placement. Most facilities require two staff members for mechanical lift transfers.',
+'Siempre verifique los limites de peso y la colocacion correcta del arnes. La mayoria de las instalaciones requieren dos miembros del personal para transferencias con elevador.');
+
+INSERT INTO questions VALUES ('q081','cna','easy',
+'The abbreviation ADL stands for:',
+'La abreviatura AVD significa:',
+'Activities of Daily Living','Actividades de la Vida Diaria',
+'Automated Drug Logging','Registro Automatizado de Medicamentos',
+'Advanced Diagnostic Lab','Laboratorio de Diagnostico Avanzado',
+'Acute Disease Level','Nivel de Enfermedad Aguda','A',
+'ADLs include bathing, dressing, eating, toileting, transferring, and continence — the basic self-care tasks CNAs help patients with.',
+'Las AVD incluyen banarse, vestirse, comer, ir al bano, transferirse y continencia — las tareas basicas de autocuidado con las que los CNA ayudan a los pacientes.');
+
+INSERT INTO questions VALUES ('q082','cna','medium',
+'A resident with dementia becomes agitated and aggressive. The CNA should first:',
+'Un residente con demencia se agita y se vuelve agresivo. El CNA debe primero:',
+'Remain calm, speak softly, and try to redirect the resident','Mantener la calma, hablar suavemente e intentar redirigir al residente',
+'Restrain the resident immediately','Restringir al residente inmediatamente',
+'Raise your voice so the resident can hear you','Levantar la voz para que el residente pueda escuchar',
+'Leave the resident alone in the room','Dejar al residente solo en la habitacion','A',
+'A calm approach with a soft voice and redirection is the best first response. Restraints require a physician order and are a last resort.',
+'Un enfoque calmado con voz suave y redireccion es la mejor primera respuesta. Las restricciones requieren orden medica y son el ultimo recurso.');
+
+INSERT INTO questions VALUES ('q083','cna','easy',
+'When making an occupied bed, the CNA should:',
+'Al tender una cama ocupada, el CNA debe:',
+'Roll the resident to one side and change linens one side at a time','Rodar al residente hacia un lado y cambiar la ropa de cama un lado a la vez',
+'Ask the resident to get out of bed first','Pedir al residente que se levante de la cama primero',
+'Pull all sheets out at once from under the resident','Jalar todas las sabanas de una vez por debajo del residente',
+'Only change the top sheet','Solo cambiar la sabana de arriba','A',
+'Rolling the resident to one side and changing linens half at a time maintains safety and comfort while keeping the bed clean.',
+'Rodar al residente hacia un lado y cambiar la ropa de cama mitad a la vez mantiene la seguridad y comodidad mientras se mantiene la cama limpia.');
+
+INSERT INTO questions VALUES ('q084','cna','medium',
+'The normal adult pulse rate at rest is:',
+'La frecuencia de pulso normal del adulto en reposo es:',
+'60-100 beats per minute','60-100 latidos por minuto',
+'40-50 beats per minute','40-50 latidos por minuto',
+'100-120 beats per minute','100-120 latidos por minuto',
+'120-150 beats per minute','120-150 latidos por minuto','A',
+'Normal adult resting pulse is 60-100 bpm. A rate below 60 is bradycardia, and above 100 is tachycardia.',
+'El pulso normal del adulto en reposo es 60-100 lpm. Una frecuencia por debajo de 60 es bradicardia, y por encima de 100 es taquicardia.');
+
+INSERT INTO questions VALUES ('q085','cna','hard',
+'A resident is on intake and output (I&O) monitoring. Which of the following should be recorded as intake?',
+'Un residente esta en monitoreo de ingesta y eliminacion (I&E). Cual de los siguientes debe registrarse como ingesta?',
+'IV fluids, oral fluids, and tube feedings','Liquidos IV, liquidos orales y alimentacion por sonda',
+'Only water consumed by mouth','Solo agua consumida por boca',
+'Only IV fluids','Solo liquidos IV',
+'Only solid food consumed','Solo alimentos solidos consumidos','A',
+'All fluids entering the body count as intake: oral fluids, IV fluids, tube feedings, and any fluid used to take medications.',
+'Todos los liquidos que entran al cuerpo cuentan como ingesta: liquidos orales, liquidos IV, alimentacion por sonda y cualquier liquido usado para tomar medicamentos.');
+
+INSERT INTO questions VALUES ('q086','cna','easy',
+'Standard precautions should be used with:',
+'Las precauciones estandar deben usarse con:',
+'All patients regardless of their diagnosis','Todos los pacientes independientemente de su diagnostico',
+'Only patients with known infections','Solo pacientes con infecciones conocidas',
+'Only patients in isolation','Solo pacientes en aislamiento',
+'Only elderly patients','Solo pacientes ancianos','A',
+'Standard precautions are used with ALL patients to prevent transmission of bloodborne pathogens and other infections.',
+'Las precauciones estandar se usan con TODOS los pacientes para prevenir la transmision de patogenos sanguineos y otras infecciones.');
+
+INSERT INTO questions VALUES ('q087','cna','medium',
+'When applying elastic stockings (TED hose), the CNA should:',
+'Al aplicar medias elasticas (medias TED), el CNA debe:',
+'Apply them in the morning before the resident gets out of bed','Aplicarlas en la manana antes de que el residente se levante de la cama',
+'Apply them after the resident has been walking for an hour','Aplicarlas despues de que el residente haya caminado por una hora',
+'Apply them only at night before sleep','Aplicarlas solo en la noche antes de dormir',
+'Apply them when the legs are most swollen','Aplicarlas cuando las piernas estan mas hinchadas','A',
+'TED hose should be applied in the morning before getting out of bed when legs have the least swelling from being elevated overnight.',
+'Las medias TED deben aplicarse en la manana antes de levantarse de la cama cuando las piernas tienen menos hinchazón por estar elevadas durante la noche.');
+
+INSERT INTO questions VALUES ('q088','cna','easy',
+'The proper way to measure blood pressure is:',
+'La forma correcta de medir la presion arterial es:',
+'With the cuff on the bare upper arm at heart level','Con el manguito en el brazo superior desnudo a nivel del corazon',
+'Over thick clothing on the upper arm','Sobre ropa gruesa en el brazo superior',
+'On the forearm below the elbow','En el antebrazo debajo del codo',
+'With the patient standing up','Con el paciente de pie','A',
+'The cuff should be placed on the bare upper arm at heart level with the patient seated and resting for accurate readings.',
+'El manguito debe colocarse en el brazo superior desnudo a nivel del corazon con el paciente sentado y en reposo para lecturas precisas.');
+
+INSERT INTO questions VALUES ('q089','cna','hard',
+'A resident who is NPO (nothing by mouth) asks for water. The CNA should:',
+'Un residente que esta NPO (nada por boca) pide agua. El CNA debe:',
+'Explain the NPO order and offer mouth care for comfort','Explicar la orden NPO y ofrecer cuidado bucal para comodidad',
+'Give a small sip of water since the resident is thirsty','Dar un pequeno sorbo de agua ya que el residente tiene sed',
+'Ignore the request completely','Ignorar la solicitud completamente',
+'Tell the resident to ask the nurse','Decirle al residente que le pregunte a la enfermera','A',
+'NPO means absolutely nothing by mouth. The CNA should explain why, offer mouth swabs or mouth care for comfort, and report continued thirst to the nurse.',
+'NPO significa absolutamente nada por boca. El CNA debe explicar por que, ofrecer hisopos bucales o cuidado bucal para comodidad, y reportar la sed continua a la enfermera.');
+
+INSERT INTO questions VALUES ('q090','cna','medium',
+'When caring for a resident with a urinary catheter, the CNA should:',
+'Al cuidar a un residente con cateter urinario, el CNA debe:',
+'Keep the drainage bag below the level of the bladder','Mantener la bolsa de drenaje por debajo del nivel de la vejiga',
+'Clamp the tubing periodically','Pinzar el tubo periodicamente',
+'Keep the bag on the bed next to the resident','Mantener la bolsa en la cama junto al residente',
+'Empty the bag only when it is completely full','Vaciar la bolsa solo cuando este completamente llena','A',
+'The drainage bag must always be below bladder level to allow gravity drainage and prevent urine backflow, which can cause infection.',
+'La bolsa de drenaje siempre debe estar por debajo del nivel de la vejiga para permitir el drenaje por gravedad y prevenir el reflujo de orina, que puede causar infeccion.');
+
+INSERT INTO questions VALUES ('q091','cna','easy',
+'The best way to identify a resident before providing care is:',
+'La mejor forma de identificar a un residente antes de proporcionar cuidado es:',
+'Check the identification bracelet and ask the resident to state their name','Verificar la pulsera de identificacion y pedir al residente que diga su nombre',
+'Ask the roommate who the resident is','Preguntar al companero de cuarto quien es el residente',
+'Look at the name on the door','Mirar el nombre en la puerta',
+'Assume the correct resident is in the correct bed','Asumir que el residente correcto esta en la cama correcta','A',
+'Two identifiers (ID bracelet and verbal confirmation) must be used before any care to prevent errors.',
+'Dos identificadores (pulsera de ID y confirmacion verbal) deben usarse antes de cualquier cuidado para prevenir errores.');
+
+INSERT INTO questions VALUES ('q092','cna','medium',
+'When performing perineal care, the CNA should always clean:',
+'Al realizar el cuidado perineal, el CNA siempre debe limpiar:',
+'From front to back','De adelante hacia atras',
+'From back to front','De atras hacia adelante',
+'In circular motions','Con movimientos circulares',
+'Side to side only','Solo de lado a lado','A',
+'Cleaning from front to back (clean to dirty) prevents urinary tract infections by keeping bacteria away from the urethra.',
+'Limpiar de adelante hacia atras (de limpio a sucio) previene infecciones del tracto urinario al mantener las bacterias lejos de la uretra.');
+
+INSERT INTO questions VALUES ('q093','cna','hard',
+'A resident falls in the hallway. The CNA''s first action should be:',
+'Un residente se cae en el pasillo. La primera accion del CNA debe ser:',
+'Stay with the resident and call for help immediately','Quedarse con el residente y pedir ayuda inmediatamente',
+'Help the resident stand up right away','Ayudar al residente a levantarse de inmediato',
+'Go get the nurse and leave the resident','Ir a buscar a la enfermera y dejar al residente',
+'Fill out an incident report','Llenar un reporte de incidente','A',
+'Never move a fallen resident until they are assessed for injuries. Stay with them, call for help, and the nurse will assess before any movement.',
+'Nunca mueva a un residente caido hasta que sea evaluado por lesiones. Quedese con el, pida ayuda, y la enfermera evaluara antes de cualquier movimiento.');
+
+INSERT INTO questions VALUES ('q094','cna','easy',
+'When measuring a resident''s weight, the CNA should:',
+'Al medir el peso de un residente, el CNA debe:',
+'Measure at the same time of day with similar clothing each time','Medir a la misma hora del dia con ropa similar cada vez',
+'Weigh with shoes and heavy clothing on','Pesar con zapatos y ropa pesada puesta',
+'Weigh only once a month','Pesar solo una vez al mes',
+'Let the resident estimate their weight','Dejar que el residente estime su peso','A',
+'Consistent conditions (same time, similar clothing, same scale) ensure accurate weight comparisons over time.',
+'Condiciones consistentes (misma hora, ropa similar, misma bascula) aseguran comparaciones de peso precisas a lo largo del tiempo.');
+
+INSERT INTO questions VALUES ('q095','cna','medium',
+'Range of motion (ROM) exercises are performed to:',
+'Los ejercicios de rango de movimiento (ROM) se realizan para:',
+'Maintain joint flexibility and prevent contractures','Mantener la flexibilidad articular y prevenir contracturas',
+'Build muscle mass','Desarrollar masa muscular',
+'Increase heart rate for cardiovascular health','Aumentar la frecuencia cardiaca para la salud cardiovascular',
+'Help residents lose weight','Ayudar a los residentes a perder peso','A',
+'ROM exercises help maintain joint flexibility, prevent stiffness and contractures, and improve circulation in immobile patients.',
+'Los ejercicios ROM ayudan a mantener la flexibilidad articular, prevenir rigidez y contracturas, y mejorar la circulacion en pacientes inmovilizados.');
+
+INSERT INTO questions VALUES ('q096','cna','easy',
+'When using a gait belt to assist with ambulation, the belt should be placed:',
+'Al usar un cinturon de marcha para asistir con la deambulacion, el cinturon debe colocarse:',
+'Around the waist over clothing, snug but comfortable','Alrededor de la cintura sobre la ropa, ajustado pero comodo',
+'Around the chest under the arms','Alrededor del pecho debajo de los brazos',
+'Around the hips below the waist','Alrededor de las caderas debajo de la cintura',
+'Over bare skin for better grip','Sobre la piel desnuda para mejor agarre','A',
+'A gait belt goes around the waist over clothing, snug enough to grip but allowing two fingers between the belt and the resident.',
+'Un cinturon de marcha va alrededor de la cintura sobre la ropa, lo suficientemente ajustado para agarrar pero permitiendo dos dedos entre el cinturon y el residente.');
+
+INSERT INTO questions VALUES ('q097','cna','hard',
+'A resident on a low-sodium diet asks for salt packets. The CNA should:',
+'Un residente en dieta baja en sodio pide paquetes de sal. El CNA debe:',
+'Explain the dietary restriction and offer approved alternatives','Explicar la restriccion dietetica y ofrecer alternativas aprobadas',
+'Provide the salt since the resident has the right to choose','Proporcionar la sal ya que el residente tiene derecho a elegir',
+'Ignore the request without explanation','Ignorar la solicitud sin explicacion',
+'Give half a packet as a compromise','Dar medio paquete como compromiso','A',
+'The CNA must follow the care plan dietary restrictions. Explain why, offer approved seasonings, and report to the nurse if the resident insists.',
+'El CNA debe seguir las restricciones dieteticas del plan de cuidado. Explique por que, ofrezca condimentos aprobados y reporte a la enfermera si el residente insiste.');
+
+INSERT INTO questions VALUES ('q098','cna','medium',
+'When documenting vital signs, the CNA notices the blood pressure is 180/110 mmHg. The CNA should:',
+'Al documentar signos vitales, el CNA nota que la presion arterial es 180/110 mmHg. El CNA debe:',
+'Report the reading to the nurse immediately','Reportar la lectura a la enfermera inmediatamente',
+'Retake it in an hour to see if it changes','Retomarlo en una hora para ver si cambia',
+'Document it and continue with other residents','Documentarlo y continuar con otros residentes',
+'Assume the reading is wrong and discard it','Asumir que la lectura esta mal y descartarla','A',
+'A BP of 180/110 is a hypertensive crisis requiring immediate nursing assessment. Always report abnormal vital signs right away.',
+'Una PA de 180/110 es una crisis hipertensiva que requiere evaluacion de enfermeria inmediata. Siempre reporte signos vitales anormales de inmediato.');
+
+INSERT INTO questions VALUES ('q099','cna','easy',
+'Proper body mechanics when lifting includes:',
+'La mecanica corporal adecuada al levantar incluye:',
+'Bending at the knees and keeping the back straight','Doblar las rodillas y mantener la espalda recta',
+'Bending at the waist with legs straight','Doblar la cintura con las piernas rectas',
+'Lifting with the arms only','Levantar solo con los brazos',
+'Twisting the body while lifting','Girar el cuerpo mientras se levanta','A',
+'Proper body mechanics: bend at the knees, keep back straight, hold objects close to the body, and use leg muscles to lift — never twist while lifting.',
+'Mecanica corporal adecuada: doblar las rodillas, mantener la espalda recta, sostener objetos cerca del cuerpo y usar los musculos de las piernas para levantar — nunca girar mientras se levanta.');
+
+INSERT INTO questions VALUES ('q100','cna','medium',
+'A CNA observes signs of abuse on a resident. The CNA is legally required to:',
+'Un CNA observa signos de abuso en un residente. El CNA esta legalmente obligado a:',
+'Report the observation to the nurse and supervisor immediately','Reportar la observacion a la enfermera y supervisor inmediatamente',
+'Confront the suspected abuser directly','Confrontar al presunto abusador directamente',
+'Wait to see if it happens again before reporting','Esperar a ver si sucede de nuevo antes de reportar',
+'Only document the findings in the chart','Solo documentar los hallazgos en el expediente','A',
+'CNAs are mandatory reporters. Any suspected abuse must be reported immediately to the nurse, supervisor, and through proper channels.',
+'Los CNA son reportadores obligatorios. Cualquier sospecha de abuso debe reportarse inmediatamente a la enfermera, supervisor y a traves de los canales apropiados.');
+
+-- CNA Flashcards
+INSERT INTO flashcards VALUES ('f031','cna','What are the 5 vital signs?','Cuales son los 5 signos vitales?','Temperature, Pulse, Respiration, Blood Pressure, Pain (or Oxygen Saturation)','Temperatura, Pulso, Respiracion, Presion Arterial, Dolor (o Saturacion de Oxigeno)');
+INSERT INTO flashcards VALUES ('f032','cna','What does ADL stand for?','Que significa AVD?','Activities of Daily Living: bathing, dressing, eating, toileting, transferring, continence','Actividades de la Vida Diaria: banarse, vestirse, comer, ir al bano, transferirse, continencia');
+INSERT INTO flashcards VALUES ('f033','cna','How often should a bedridden patient be repositioned?','Con que frecuencia debe reposicionarse a un paciente encamado?','Every 2 hours to prevent pressure ulcers','Cada 2 horas para prevenir ulceras por presion');
+INSERT INTO flashcards VALUES ('f034','cna','What is the normal adult blood pressure?','Cual es la presion arterial normal del adulto?','Less than 120/80 mmHg','Menos de 120/80 mmHg');
+INSERT INTO flashcards VALUES ('f035','cna','What does NPO mean?','Que significa NPO?','Nothing by mouth (nil per os) — the patient cannot eat or drink anything','Nada por boca (nil per os) — el paciente no puede comer ni beber nada');
+INSERT INTO flashcards VALUES ('f036','cna','What is the correct direction for perineal care?','Cual es la direccion correcta para el cuidado perineal?','Front to back (clean to dirty) to prevent urinary tract infections','De adelante hacia atras (limpio a sucio) para prevenir infecciones urinarias');
+INSERT INTO flashcards VALUES ('f037','cna','What are standard precautions?','Que son las precauciones estandar?','Infection control practices used with ALL patients: hand hygiene, gloves, gowns, masks as needed','Practicas de control de infecciones usadas con TODOS los pacientes: higiene de manos, guantes, batas, mascarillas segun se necesite');
+INSERT INTO flashcards VALUES ('f038','cna','What is proper body mechanics when lifting?','Cual es la mecanica corporal adecuada al levantar?','Bend at the knees, keep back straight, hold objects close, use leg muscles, never twist','Doblar las rodillas, mantener espalda recta, sostener objetos cerca, usar musculos de las piernas, nunca girar');
+INSERT INTO flashcards VALUES ('f039','cna','What should a CNA do if a resident falls?','Que debe hacer un CNA si un residente se cae?','Stay with the resident, call for help, do NOT move them until assessed by a nurse','Quedarse con el residente, pedir ayuda, NO moverlo hasta que sea evaluado por una enfermera');
+INSERT INTO flashcards VALUES ('f040','cna','What is a CNA''s duty regarding suspected abuse?','Cual es el deber de un CNA respecto al abuso sospechado?','CNAs are mandatory reporters — report immediately to nurse, supervisor, and proper authorities','Los CNA son reportadores obligatorios — reportar inmediatamente a enfermera, supervisor y autoridades apropiadas');
 

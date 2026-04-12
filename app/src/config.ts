@@ -52,6 +52,19 @@ export const certifications: Certification[] = [
     examMinutes: 120,
     color: "#7c3aed",
   },
+  {
+    id: "cna",
+    name: "Certified Nursing Assistant",
+    nameEs: "Asistente de Enfermeria Certificado",
+    examCode: "CNA",
+    description: "Patient care, vital signs, infection control, safety, communication, activities of daily living, and nursing assistant skills.",
+    descriptionEs: "Cuidado del paciente, signos vitales, control de infecciones, seguridad, comunicacion, actividades de la vida diaria y habilidades de asistente de enfermeria.",
+    icon: "HeartPulse",
+    status: "active",
+    examQuestions: 60,
+    examMinutes: 90,
+    color: "#2563eb",
+  },
 ];
 
 const config = {
@@ -69,9 +82,9 @@ const config = {
     freeQuestions: 10,
     freeTutorSessions: 1,
     pricing: {
-      monthly: 9.99,
-      yearly: 49.99,
-      bundle: 79.99,
+      monthly: 19,
+      yearly: 99,
+      bundle: 149,
     },
   },
 };
