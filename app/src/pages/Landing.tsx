@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { useI18n } from "../i18n";
 import { useAuth } from "../auth";
 import config, { certifications } from "../config";
-import { BookOpen, ClipboardList, Bot, Globe, Stethoscope, Pill, Droplets, Lock, Star, Zap } from "lucide-react";
+import { BookOpen, ClipboardList, Bot, Globe, Stethoscope, Pill, Droplets, HeartPulse, Lock, Star, Zap } from "lucide-react";
 
 const certIcons: Record<string, typeof Stethoscope> = {
-  Stethoscope, Pill, Droplets,
+  Stethoscope, Pill, Droplets, HeartPulse,
 };
 
 export default function Landing() {
@@ -105,7 +105,7 @@ export default function Landing() {
           <p className="text-gray-400 text-center mb-10">
             {t("landing.cert_section_sub")}
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {certifications.map((cert) => {
               const Icon = certIcons[cert.icon] || Stethoscope;
               const isActive = cert.status === "active";

@@ -26,7 +26,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "landing.hero_badge": "Medical Assistant Exam Prep",
     "landing.hero_title": "Your CMA/RMA Certification Starts Here",
     "landing.cert_section_title": "Choose Your Certification",
-    "landing.cert_section_sub": "Start with Medical Assistant — more certifications coming soon.",
+    "landing.cert_section_sub": "Medical Assistant & CNA available now — more certifications coming soon.",
     "landing.coming_soon": "Coming Soon",
     "landing.active": "Available Now",
     "landing.questions": "questions",
@@ -35,10 +35,10 @@ const translations: Record<Lang, Record<string, string>> = {
     "landing.freemium_free": "Free",
     "landing.freemium_free_desc": "10 practice questions + 1 AI tutor session",
     "landing.freemium_pro": "Pro",
-    "landing.freemium_pro_price": "$9.99/mo",
+    "landing.freemium_pro_price": "$19/mo",
     "landing.freemium_pro_desc": "Unlimited questions, exams, flashcards & AI tutor per certification",
     "landing.freemium_bundle": "Bundle",
-    "landing.freemium_bundle_price": "$79.99/yr",
+    "landing.freemium_bundle_price": "$149/yr",
     "landing.freemium_bundle_desc": "Access all certifications — best value",
 
     // Auth
@@ -177,14 +177,17 @@ const translations: Record<Lang, Record<string, string>> = {
     "domain.medical_assisting": "Medical Assisting",
     "domain.pharmacy_tech": "Pharmacy Technician",
     "domain.phlebotomy_tech": "Phlebotomy Technician",
+    "domain.cna": "Certified Nursing Assistant",
 
     // Certification details
     "cert.medical_assisting": "Medical Assistant",
     "cert.pharmacy_tech": "Pharmacy Technician",
     "cert.phlebotomy_tech": "Phlebotomy Technician",
+    "cert.cna": "Certified Nursing Assistant",
     "cert.ma_desc": "Clinical procedures, vital signs, EKG, phlebotomy, patient intake, medical terminology, and office administration.",
     "cert.pt_desc": "Pharmacology, drug classifications, compounding, dispensing, dosage calculations, inventory, and pharmacy law.",
     "cert.phleb_desc": "Venipuncture, order of draw, specimen collection, safety protocols, anatomy, and lab procedures.",
+    "cert.cna_desc": "Patient care, vital signs, infection control, safety, communication, activities of daily living, and nursing assistant skills.",
 
     // AI Tutor
     "tutor.title": "AI Tutor",
@@ -197,9 +200,11 @@ const translations: Record<Lang, Record<string, string>> = {
     "tutor.medical_assisting": "Medical Assistant",
     "tutor.pharmacy_tech": "Pharmacy Technician",
     "tutor.phlebotomy_tech": "Phlebotomy Technician",
+    "tutor.cna": "Certified Nursing Assistant",
     "tutor.ma_desc": "Clinical procedures, patient intake, vital signs, EKG, phlebotomy, and medical office administration.",
     "tutor.pt_desc": "Pharmacology, drug classifications, compounding, dispensing, inventory, and pharmacy law.",
     "tutor.phleb_desc": "Venipuncture, order of draw, specimen collection, safety protocols, anatomy, and lab procedures.",
+    "tutor.cna_desc": "Patient care, vital signs, infection control, safety, ADLs, communication, and nursing assistant skills.",
     "tutor.welcome_title": "Your Allied Health clinical tutor",
     "tutor.welcome_sub": "Ask anything about your certification. I'm here to help you truly understand \u2014 not just memorize.",
     "tutor.coming_soon": "Coming Soon",
@@ -234,7 +239,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "landing.hero_badge": "Preparacion Examen Asistente Medico",
     "landing.hero_title": "Tu Certificacion CMA/RMA Empieza Aqui",
     "landing.cert_section_title": "Elige Tu Certificacion",
-    "landing.cert_section_sub": "Comienza con Asistente Medico — mas certificaciones proximamente.",
+    "landing.cert_section_sub": "Asistente Medico y CNA disponibles ahora — mas certificaciones proximamente.",
     "landing.coming_soon": "Proximamente",
     "landing.active": "Disponible Ahora",
     "landing.questions": "preguntas",
@@ -243,10 +248,10 @@ const translations: Record<Lang, Record<string, string>> = {
     "landing.freemium_free": "Gratis",
     "landing.freemium_free_desc": "10 preguntas de practica + 1 sesion de tutor IA",
     "landing.freemium_pro": "Pro",
-    "landing.freemium_pro_price": "$9.99/mes",
+    "landing.freemium_pro_price": "$19/mes",
     "landing.freemium_pro_desc": "Preguntas, examenes, tarjetas y tutor IA ilimitados por certificacion",
     "landing.freemium_bundle": "Bundle",
-    "landing.freemium_bundle_price": "$79.99/ano",
+    "landing.freemium_bundle_price": "$149/ano",
     "landing.freemium_bundle_desc": "Acceso a todas las certificaciones — mejor valor",
 
     // Auth
@@ -385,14 +390,17 @@ const translations: Record<Lang, Record<string, string>> = {
     "domain.medical_assisting": "Asistencia Medica",
     "domain.pharmacy_tech": "Tecnico de Farmacia",
     "domain.phlebotomy_tech": "Tecnico de Flebotomia",
+    "domain.cna": "Asistente de Enfermeria Certificado",
 
     // Certification details
     "cert.medical_assisting": "Asistente Medico",
     "cert.pharmacy_tech": "Tecnico de Farmacia",
     "cert.phlebotomy_tech": "Tecnico de Flebotomia",
+    "cert.cna": "Asistente de Enfermeria Certificado",
     "cert.ma_desc": "Procedimientos clinicos, signos vitales, EKG, flebotomia, admision del paciente, terminologia medica y administracion de oficina.",
     "cert.pt_desc": "Farmacologia, clasificaciones de medicamentos, preparacion, dispensacion, calculo de dosis, inventario y leyes de farmacia.",
     "cert.phleb_desc": "Venopuncion, orden de extraccion, recoleccion de muestras, protocolos de seguridad, anatomia y procedimientos de laboratorio.",
+    "cert.cna_desc": "Cuidado del paciente, signos vitales, control de infecciones, seguridad, comunicacion, actividades de la vida diaria y habilidades de asistente de enfermeria.",
 
     // AI Tutor
     "tutor.title": "Tutor IA",
@@ -405,9 +413,11 @@ const translations: Record<Lang, Record<string, string>> = {
     "tutor.medical_assisting": "Asistente Medico",
     "tutor.pharmacy_tech": "Tecnico de Farmacia",
     "tutor.phlebotomy_tech": "Tecnico de Flebotomia",
+    "tutor.cna": "Asistente de Enfermeria Certificado",
     "tutor.ma_desc": "Procedimientos clinicos, toma de signos vitales, EKG, flebotomia y administracion de oficina medica.",
     "tutor.pt_desc": "Farmacologia, clasificaciones de medicamentos, preparacion, dispensacion, inventario y leyes de farmacia.",
     "tutor.phleb_desc": "Venopuncion, orden de extraccion, recoleccion de muestras, protocolos de seguridad, anatomia y procedimientos de laboratorio.",
+    "tutor.cna_desc": "Cuidado del paciente, signos vitales, control de infecciones, seguridad, AVD, comunicacion y habilidades de asistente de enfermeria.",
     "tutor.welcome_title": "Tu tutor clinico de Salud Aliada",
     "tutor.welcome_sub": "Haz cualquier pregunta sobre tu certificacion. Estoy aqui para ayudarte a entender \u2014 no solo a memorizar.",
     "tutor.coming_soon": "Proximamente",

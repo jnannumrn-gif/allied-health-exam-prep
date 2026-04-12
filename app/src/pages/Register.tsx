@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useI18n } from "../i18n";
 import { useAuth } from "../auth";
 import config, { certifications } from "../config";
-import { Stethoscope, Pill, Droplets, Lock, ChevronRight, ChevronLeft } from "lucide-react";
+import { Stethoscope, Pill, Droplets, HeartPulse, Lock, ChevronRight, ChevronLeft } from "lucide-react";
 
 const certIcons: Record<string, typeof Stethoscope> = {
-  Stethoscope, Pill, Droplets,
+  Stethoscope, Pill, Droplets, HeartPulse,
 };
 
 export default function Register() {
