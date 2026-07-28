@@ -1,0 +1,8 @@
+name = "allied-health-prep-api"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "allied-health-prep-db"
+database_id = "placeholder-update-after-d1-create"
