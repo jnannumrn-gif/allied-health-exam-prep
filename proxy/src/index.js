@@ -4,6 +4,11 @@
  * Keeps the API key server-side and adds CORS headers.
  */
 
+// Single source of truth for the tutor model. A client-supplied `model` is
+// ignored so that a model swap is a redeploy of this worker alone, and so cached
+// or stale pages pinned to a retired model keep working.
+const MODEL = 'claude-sonnet-4-5-20250929';
+
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -25,7 +30,7 @@ export default {
 
     try {
       const body = await request.json();
-      const { model, max_tokens, system, messages } = body;
+      const { max_tokens, system, messages } = body;
 
       if (!messages || !Array.isArray(messages) || messages.length === 0) {
         return Response.json(
@@ -42,7 +47,7 @@ export default {
           'anthropic-version': '2023-06-01',
         },
         body: JSON.stringify({
-          model: model || 'claude-sonnet-4-20250514',
+          model: MODEL,
           max_tokens: max_tokens || 1000,
           system: system || '',
           messages,
